@@ -1,0 +1,122 @@
+body
+{
+	background-color: #222;
+}
+ul
+{
+	margin-left: 0;
+}
+
+.fullWidth
+{
+border-bottom: 1px solid #666;
+}
+
+.color
+{
+background-color: #222;
+}
+
+/* Use in large
+.sub
+{
+	border: 1px solid #ccc;
+}
+*/
+
+.section-title
+{
+
+	h2
+	{
+		font-weight: bold;
+		font-variant: small-caps;
+		color: #fff;
+		margin-bottom: .25em;
+		padding-left: 0;
+	}
+	
+}
+
+.accordion-navigation
+{
+	padding: 0;
+	margin: 0;
+}
+
+
+#panel_online_resources
+{
+	padding-top: 0;
+	padding-bottom: 0;
+	margin: 0;
+}
+
+.accordion .accordion-navigation > a, .accordion dd > a
+{
+	padding: 0;
+	margin: 0;
+}
+.subsection-title
+{
+	font-weight: bold;
+	font-size: 1em;
+	color: #fff;
+	font-variant: small-caps;
+	border-bottom: 1px solid #666;
+	background-color: #008cba - 20;
+	padding: .58em 15px;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.contact-list
+{
+
+	margin-left: 0;
+
+	.contact-listing
+	{
+		list-style-type: none;
+		border-bottom: 1px solid #ccc;
+		padding-top: .5em;
+		padding-bottom: .5em;
+	}
+
+	.contact-title
+	{
+		font-size: .75em;
+		line-height: 1.3em;
+		display: inline-block;
+		color: #666;
+		font-variant: small-caps;
+	}
+
+	.contact-name
+	{
+		color: #333;
+		font-weight: bold;
+	}
+
+	.mail-icon
+	{
+		height: 18px;
+
+	}
+}
+
+.directions-list
+{
+	margin-left: 0;
+	list-style-position: inside;
+	
+	.direction-step
+	{
+		border-bottom: 1px solid #ccc;
+		padding: .75em 0;
+
+	}
+}
+
+
+
