@@ -1,6 +1,6 @@
 header
 {
-	background-color: #222;
+	background-color: $darkest;
 	padding: .25em 0;
 
 	span
@@ -13,7 +13,7 @@ header
 
 body
 {
-	background-color: #333;
+	background-color: $dark;
 	font-family: $main-font;
 }
 
@@ -26,7 +26,7 @@ h2
 {
 	font-size: 1.25em;
 	font-family: $main-font;
-	color: #ccc;
+	color: $light-grey;
 }
 
 h3
@@ -39,12 +39,48 @@ button
 {
 	font-family: $main-font;
 	border: 6px solid $main-color - 20;
-	background-color: #333 - 10;
+	background-color: $darkest;
 }
 
 button:hover
 {
 	border: 6px solid $main-color - 40;
+}
+
+.tabs dd
+{
+	width: 33.3333%;
+	font-family: $main-font;
+
+}
+
+.tabs dd > a
+{
+	padding: 10px;
+	border: 6px solid $main-color - 20;
+	transition: background-color 0.5s ease;
+	background-color: $darkest;
+	color: $white;
+	font-family: $main-font;
+	padding: .9em 0;
+}
+
+.tabs dd > a:hover
+{
+	transition: background-color 0.5s ease;
+	background-color: $main-color;
+}
+
+.tabs dd.active a, .tabs .tab-title.active a
+{
+	background-color: $dark + $main-color - 40;
+	color: $white;
+}
+
+.tabs-content ul
+{
+	list-style-type: none;
+	margin-left: 0;
 }
 
 
@@ -77,6 +113,20 @@ button:hover
 	padding-bottom: .5em;
 }
 
+table
+{
+	thead tr td, tbody tr td
+	{
+		color: $white;
+	}
+
+
+
+	td
+	{
+		border: 1px solid #444;
+	}
+}
 
 
 

@@ -5317,7 +5317,10 @@ table {
     color: #222222;
     text-align: left; }
   table tr.even, table tr.alt, table tr:nth-of-type(even) {
-    background: #f9f9f9; }
+    background: $dark; }
+  table tr.odd, table tr.alt, table tr:nth-of-type(odd) {
+    background: $darkest; }
+
   table thead tr th,
   table tfoot tr th,
   table tfoot tr td,
