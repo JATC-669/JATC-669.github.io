@@ -9,6 +9,11 @@ header
 		font-weight: bold;
 		font-size: 1.5em;
 	}
+
+	.logo
+	{
+		color: $white;
+	}
 }
 
 body
@@ -128,6 +133,17 @@ table
 	}
 }
 
+.new-intake
+{
+	input
+	{
+		margin: 0;
+	}
 
-
+	button
+	{
+		margin: 0;
+		padding: .75em 0;
+	}
+}
 

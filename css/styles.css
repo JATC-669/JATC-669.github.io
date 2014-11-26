@@ -4700,7 +4700,7 @@ meta.foundation-mq-topbar {
   border-color: #d8d8d8;
   margin-bottom: 1.25rem;
   padding: 1.25rem;
-  background: #f2f2f2;
+  background: #333333;
   color: #333333;
 }
 
@@ -10339,50 +10339,54 @@ header span {
   font-weight: bold;
   font-size: 1.5em;
 }
+/* line 14, ../scss/_style.scss */
+header .logo {
+  color: white;
+}
 
-/* line 15, ../scss/_style.scss */
+/* line 20, ../scss/_style.scss */
 body {
   background-color: #333333;
   font-family: "Roboto Slab", serif;
 }
 
-/* line 21, ../scss/_style.scss */
+/* line 26, ../scss/_style.scss */
 main {
   margin: 2em auto;
 }
 
-/* line 26, ../scss/_style.scss */
+/* line 31, ../scss/_style.scss */
 h2 {
   font-size: 1.25em;
   font-family: "Roboto Slab", serif;
   color: #cccccc;
 }
 
-/* line 33, ../scss/_style.scss */
+/* line 38, ../scss/_style.scss */
 h3 {
   font-size: 1.25em;
   font-family: "Roboto Slab", serif;
 }
 
-/* line 39, ../scss/_style.scss */
+/* line 44, ../scss/_style.scss */
 button {
   font-family: "Roboto Slab", serif;
   border: 6px solid #006a93;
   background-color: #222222;
 }
 
-/* line 46, ../scss/_style.scss */
+/* line 51, ../scss/_style.scss */
 button:hover {
   border: 6px solid #00567f;
 }
 
-/* line 51, ../scss/_style.scss */
+/* line 56, ../scss/_style.scss */
 .tabs dd {
   width: 33.3333%;
   font-family: "Roboto Slab", serif;
 }
 
-/* line 58, ../scss/_style.scss */
+/* line 63, ../scss/_style.scss */
 .tabs dd > a {
   padding: 10px;
   border: 6px solid #006a93;
@@ -10393,58 +10397,68 @@ button:hover {
   padding: .9em 0;
 }
 
-/* line 69, ../scss/_style.scss */
+/* line 74, ../scss/_style.scss */
 .tabs dd > a:hover {
   transition: background-color 0.5s ease;
   background-color: #007ea7;
 }
 
-/* line 75, ../scss/_style.scss */
+/* line 80, ../scss/_style.scss */
 .tabs dd.active a, .tabs .tab-title.active a {
   background-color: #0b89b2;
   color: white;
 }
 
-/* line 81, ../scss/_style.scss */
+/* line 86, ../scss/_style.scss */
 .tabs-content ul {
   list-style-type: none;
   margin-left: 0;
 }
 
-/* line 88, ../scss/_style.scss */
+/* line 93, ../scss/_style.scss */
 .accordion .accordion-navigation > a, .accordion dd > #panel1, .accordion .accordion-navigation > a, .accordion dd > #panel2, .accordion dd > #panel3, .accordion dd > #panel4, .accordion dd > #panel5, .accordion dd > #panel6 {
   padding: 0;
   background: none;
 }
 
-/* line 94, ../scss/_style.scss */
+/* line 99, ../scss/_style.scss */
 .accordion .accordion-navigation.active > a, .accordion dd.active > a {
   background: none;
 }
 
-/* line 99, ../scss/_style.scss */
+/* line 104, ../scss/_style.scss */
 .accordion .accordion-navigation > a:hover, .accordion dd > a:hover {
   background: none;
 }
 
-/* line 104, ../scss/_style.scss */
+/* line 109, ../scss/_style.scss */
 .contact-list {
   list-style-type: none;
   margin-right: 15px;
 }
 
-/* line 110, ../scss/_style.scss */
+/* line 115, ../scss/_style.scss */
 .contact-listing {
   color: #fff;
   border-bottom: 1px solid #444;
   padding-bottom: .5em;
 }
 
-/* line 119, ../scss/_style.scss */
+/* line 124, ../scss/_style.scss */
 table thead tr td, table tbody tr td {
   color: white;
 }
-/* line 126, ../scss/_style.scss */
+/* line 131, ../scss/_style.scss */
 table td {
   border: 1px solid #444;
+}
+
+/* line 139, ../scss/_style.scss */
+.new-intake input {
+  margin: 0;
+}
+/* line 144, ../scss/_style.scss */
+.new-intake button {
+  margin: 0;
+  padding: .75em 0;
 }
