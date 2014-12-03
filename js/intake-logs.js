@@ -18,7 +18,6 @@ function intakeLogsInit() {
 
 function addLog() {
 
-
 	/*************************/
 	/* STUDENT NUMBER GRABER */
 	/*************************/
@@ -39,22 +38,10 @@ function addLog() {
 
 	if (courseNumberLength !== 2)
 	{
-		alert("not correct");
+		alert('Not a valid course.');
 	} else {
 		var spfValue = 'SPF' + courseNumber;
 	}
-
-	/*
-	if (courseNumber.length != 2) {
-		alert("shit is fucked up");
-	}
-
-	else {
-		alert('SPF' + courseNumber.value);
-	};
-	*/
-
-
 
 	/**********************/
 	/* LESSON CALCULATION */
@@ -87,9 +74,29 @@ function addLog() {
 
 	/* Adds the lesson counts together */
 	var totalLessons=0;
-	for(var i in res) {
+	for (var i in res) {
 			totalLessons += res[i];
-		};
+	};
+
+	/*****************/
+	/* Final Grabber */
+	/*****************/
+	var finalField = document.getElementById('finalField');
+	if (finalField.value ===  'Y' || 
+		finalField.value ===  'y' || 
+		finalField.value ===  'yes' || 
+		finalField.value ===  'YES' || 
+		finalField.value ===  'Yes' ||
+		finalField.value ===  'f' ||
+		finalField.value ===  'F' || 
+		finalField.value ===  'final' || 
+		finalField.value ===  'Final' || 
+		finalField.value ===  'FINAL') {
+		
+		var finalFieldInclude = true;
+	}	else {
+		var finalFieldInclude = false;
+	};
 
 	/* NOTE: dateField.value goes into Date Field
 			 studentIdNumber.value goes into Student Id field
@@ -100,8 +107,59 @@ function addLog() {
 			 totalLessons go into the TLS field */
 
 	var arr = [dateField.value, studentIdNumber.value, studentLastName.value, studentFirstName.value, spfValue, rawLessons, totalLessons]
-	alert(arr);
 
+	var tableRow = document.createElement('tr');
+
+	var tableCell1 = document.createElement('td');
+	tableCell1.innerHTML = dateField.value;
+
+	var tableCell2 = document.createElement('td');
+	tableCell2.innerHTML = studentIdNumber.value;
+
+	var tableCell3 = document.createElement('td');
+	tableCell3.innerHTML = studentLastName.value;
+
+	var tableCell4 = document.createElement('td');
+	tableCell4.innerHTML = studentFirstName.value;
+
+	var tableCell5 = document.createElement('td');
+	tableCell5.innerHTML = spfValue;
+
+	var tableCell6 = document.createElement('td');
+	tableCell6.innerHTML = rawLessons;
+
+	var tableCell7 = document.createElement('td');
+
+	if (finalFieldInclude == true) {
+		tableCell7.innerHTML = 'Final';
+	}	else {
+		tableCell7.innerHTML = ' ';
+	};
+
+	var tableCell8 = document.createElement('td');
+	tableCell8.innerHTML = totalLessons;
+
+	var tableCell9 = document.createElement('td');
+	tableCell9.className = 'text-right';
+	tableCell9.innerHTML = '$ ';
+
+	var tableCell10 = document.createElement('td');
+	tableCell10.innerHTML = totalLessons * 3.50;
+
+	tableRow.appendChild(tableCell1);
+	tableRow.appendChild(tableCell2);
+	tableRow.appendChild(tableCell3);
+	tableRow.appendChild(tableCell4);
+	tableRow.appendChild(tableCell5);
+	tableRow.appendChild(tableCell6);
+	tableRow.appendChild(tableCell7);
+	tableRow.appendChild(tableCell8);
+	tableRow.appendChild(tableCell9);
+	tableRow.appendChild(tableCell10);
+
+	var tableBody = document.getElementById('tableBody');
+	
+	tableBody.appendChild(tableRow);
 };
 
 

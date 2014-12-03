@@ -38,9 +38,9 @@
                 <td>First name</td>
                 <td width="10%">Course</td>
                 <td width="10%">Lesson #s</td>
-                <td width="6%">Final</td>
+                <td width="9%">Final</td>
                 <td width="9%">Total Lessons Submitted</td>
-                <td>Amount Due</td>
+                <td colspan="2">Amount Due</td>
               </tr>
               <tr class="new-intake">
                 <td><input id="dateField" type="date"></td>
@@ -65,22 +65,11 @@
                   </div>
                 </td>
                 <td><input id="lessonField" type="text"></td>
-                <td><input id="finalField" type="text"></td>
-                <td colspan="2"><button onclick="addLog()" class="expand">Add Log</button></td>
+                <td class="text-center"><input id="finalField" type="text"></td>
+                <td colspan="3"><button onclick="addLog()" class="expand">Add Log</button></td>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>11/25/14</td>
-                <td>00599192</td>
-                <td>O'Key</td>
-                <td>Bob</td>
-                <td>SPF04</td>
-                <td>4-5</td>
-                <td>Final</td>
-                <td>2</td>
-                <td>$7.50</td>
-              </tr>
+            <tbody id="tableBody">
             </tbody>
           </table>
         </div>
