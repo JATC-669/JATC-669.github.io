@@ -10462,3 +10462,15 @@ table td {
   margin: 0;
   padding: .75em 0;
 }
+
+/* line 151, ../scss/_style.scss */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* line 156, ../scss/_style.scss */
+input[type=number] {
+  -moz-appearance: textfield;
+}
