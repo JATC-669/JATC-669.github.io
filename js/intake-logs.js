@@ -161,7 +161,7 @@ function addLog() {
 	
 	/* Validates Data for empty fiels */
 
-	/*
+	
 	if (studentIdNumber.value.length !== 8) {
 		alert('Not a valid Student Number')
 	}
@@ -182,7 +182,7 @@ function addLog() {
 	}
 	else
 	{
-		*/
+		
 		/* Appends the TR to the TBODY */
 		tableBody.appendChild(tableRow);
 
@@ -194,21 +194,13 @@ function addLog() {
 		lessonField.value = '5';
 		finalField.value = '6';
 
-	/*
-	}
-	*/
-
-
 	
-var lessonsCostValue = document.createTextNode('');
-	document.getElementById('lessonsCost').appendChild(lessonsCostValue);
+	}
+	
 
-	dogs();
 };
 
 function dogs() {
-
-	
 
 	var lessonsCostValue = document.createTextNode('Money');
 	document.getElementById('lessonsCost').appendChild(lessonsCostValue);
