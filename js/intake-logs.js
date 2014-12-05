@@ -154,10 +154,14 @@ function addLog() {
 	tableRow.appendChild(tableCell9);
 	tableRow.appendChild(tableCell10);
 
+
+
 	/* Defines the TBODY element */
 	var tableBody = document.getElementById('tableBody');
 	
 	/* Validates Data for empty fiels */
+
+	/*
 	if (studentIdNumber.value.length !== 8) {
 		alert('Not a valid Student Number')
 	}
@@ -178,23 +182,37 @@ function addLog() {
 	}
 	else
 	{
+		*/
 		/* Appends the TR to the TBODY */
 		tableBody.appendChild(tableRow);
 
 		/* Clears Data for next Entry */
-		studentIdNumber.value = '';
-		studentLastName.value = '';
-		studentFirstName.value = '';
-		course.value = '';
-		lessonField.value = '';
-		finalField.value = '';
+		studentIdNumber.value = '1';
+		studentLastName.value = '2';
+		studentFirstName.value = '3';
+		course.value = '4';
+		lessonField.value = '5';
+		finalField.value = '6';
+
+	/*
 	}
+	*/
+
+
+	
+var lessonsCostValue = document.createTextNode('');
+	document.getElementById('lessonsCost').appendChild(lessonsCostValue);
+
+	dogs();
 };
 
+function dogs() {
 
+	
 
-
-
+	var lessonsCostValue = document.createTextNode('Money');
+	document.getElementById('lessonsCost').appendChild(lessonsCostValue);
+}
 
 
 
