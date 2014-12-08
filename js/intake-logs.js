@@ -11,10 +11,10 @@ function intakeLogsInit() {
 	var node = document.getElementById('dateField');
 	node.value = todaysDate;
 
-
 };
 
 function addLog() {
+
 
 	/*************************/
 	/* STUDENT NUMBER GRABER */
@@ -159,7 +159,9 @@ function addLog() {
 	/* Defines the TBODY element */
 	var tableBody = document.getElementById('tableBody');
 	
-	/* Validates Data for empty fiels */
+
+
+	/* Validates Data for empty fields */
 
 	
 	if (studentIdNumber.value.length !== 8) {
@@ -187,24 +189,17 @@ function addLog() {
 		tableBody.appendChild(tableRow);
 
 		/* Clears Data for next Entry */
-		studentIdNumber.value = '1';
-		studentLastName.value = '2';
-		studentFirstName.value = '3';
-		course.value = '4';
-		lessonField.value = '5';
-		finalField.value = '6';
+		studentIdNumber.value = '00000000';
+		studentLastName.value = 'qwe ';
+		studentFirstName.value = 'qwe';
+		course.value = '07';
+		lessonField.value = '1';
+		finalField.value = ' ';
+	};
 
-	
-	}
-	
 
+	alert(typeof tableRow.textContent);
 };
-
-function dogs() {
-
-	var lessonsCostValue = document.createTextNode('Money');
-	document.getElementById('lessonsCost').appendChild(lessonsCostValue);
-}
 
 
 
