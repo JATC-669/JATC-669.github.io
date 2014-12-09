@@ -88,7 +88,7 @@ function addLog() {
 		
 		var finalFieldInclude = true;
 	}	else {
-		var finalFieldInclude = false;
+		var finalFieldInclude = null;
 	};
 
 	/* Creates an array of all the values */
@@ -161,9 +161,7 @@ function addLog() {
 	
 
 
-	/* Validates Data for empty fields */
-
-	
+	/* Validates Data for empty fields */	
 	if (studentIdNumber.value.length !== 8) {
 		alert('Not a valid Student Number')
 	}
@@ -189,16 +187,16 @@ function addLog() {
 		tableBody.appendChild(tableRow);
 
 		/* Clears Data for next Entry */
-		studentIdNumber.value = '00000000';
-		studentLastName.value = 'qwe ';
-		studentFirstName.value = 'qwe';
-		course.value = '07';
-		lessonField.value = '1';
-		finalField.value = ' ';
+		studentIdNumber.value = null;
+		studentLastName.value = null;
+		studentFirstName.value = null;
+		course.value = null;
+		lessonField.value = null;
+		finalField.value = null;
 	};
+	var totalTableRow = document.body.getElementById('totalTableRow');
+	totalTableRow.setAttribute("align", "center");
 
-
-	alert(typeof tableRow.textContent);
 };
 
 
