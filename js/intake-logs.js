@@ -13,6 +13,11 @@ function intakeLogsInit() {
 
 };
 
+function removeTable(id)
+{
+    return (table=document.getElementById('thisTotalTable')).parentNode.removeChild(table);
+}
+
 function addLog() {
 
 
@@ -194,9 +199,18 @@ function addLog() {
 		lessonField.value = null;
 		finalField.value = null;
 	};
-	var totalTableRow = document.body.getElementById('totalTableRow');
-	totalTableRow.setAttribute("align", "center");
 
+	var totalTable = document.createElement('table');
+	var totalRow = document.createElement('tr');
+	var totalRowTitle = document.createElement('td')
+	var totalRowTitleContent = document.createTextNode('Totals');
+
+	totalRowTitle.appendChild(totalRowTitleContent);
+	totalRow.appendChild(totalRowTitle);
+	totalTable.appendChild(totalRow);
+
+	document.body.appendChild(totalTable);
+	totalTable.setAttribute('id', 'thisTotalTable');
 };
 
 

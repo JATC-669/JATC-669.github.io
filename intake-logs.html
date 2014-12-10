@@ -66,7 +66,7 @@
                 </td>
                 <td><input id="lessonField" type="text"></td>
                 <td class="text-center"><input id="finalField" type="text"></td>
-                <td colspan="3"><button onclick="addLog()" class="expand">Add Log</button></td>
+                <td colspan="3"><button onmousedown="removeTable()" onmouseup="addLog()" onmouseup="addLog()" class="expand">Add Log</button></td>
               </tr>
             </thead>
             <tbody id="tableBody">
@@ -74,15 +74,7 @@
           </table>
 
           <!-- Total Tables -->
-          <table width='100%'>
-            <tbody id="totalTable">
-              <tr id="totalTableRow">
-                <td class="text-right">TOTALS:</td>
-                <td width="9%">Yes</td>
-                <td id="lessonsCost" width="10%"></td>
-              </tr>
-            </tbody>
-          </table>
+
         </div>
       </div>
     </main>
