@@ -200,17 +200,63 @@ function addLog() {
 		finalField.value = null;
 	};
 
-	var totalTable = document.createElement('table');
-	var totalRow = document.createElement('tr');
-	var totalRowTitle = document.createElement('td')
-	var totalRowTitleContent = document.createTextNode('Totals');
+	
+	/* Total Bar */
+
+
+	var tablesSection = document.getElementById('tablesSection');
+	var totalTable    = document.createElement('table');
+	var totalHead     = document.createElement('thead');
+	var totalRow      = document.createElement('tr');
+	
+	var totalRowTitle         = document.createElement('td');
+	var totalRowTitleContent  = document.createTextNode('Totals');
+
+	var totalLes              = document.createElement('td');
+	var totalLesContent       = document.createTextNode(totalLessons);
+
+	var totalDolalSign        = document.createElement('td');
+	var totalDolalSignContent = document.createTextNode('$');
+
+	var totalCost             = document.createElement('td');
+	var totalCostContent      = document.createTextNode('3.5');
+	
+
+	/* Adds the 'text-right' class to the total row title cell */
+	totalRowTitle.setAttribute('class', 'text-right');
+
+	/* Adds the 'text-right' class to the total row title cell */
+	totalLes.setAttribute('width', '9%');
+
+	/* Adds the 'text-right' class to the total row title cell */
+	totalDolalSign.setAttribute('width', '4%');
+	totalDolalSign.setAttribute('class', 'text-right');
+
+	/* Adds the 'text-right' class to the total row title cell */
+	totalCost.setAttribute('width', '6%');
+
 
 	totalRowTitle.appendChild(totalRowTitleContent);
 	totalRow.appendChild(totalRowTitle);
-	totalTable.appendChild(totalRow);
 
-	document.body.appendChild(totalTable);
+	totalLes.appendChild(totalLesContent);
+	totalRow.appendChild(totalLes);
+
+	totalDolalSign.appendChild(totalDolalSignContent);
+	totalRow.appendChild(totalDolalSign);
+
+	totalCost.appendChild(totalCostContent);
+	totalRow.appendChild(totalCost);
+
+	totalHead.appendChild(totalRow);
+	totalTable.appendChild(totalHead);
+
+	tablesSection.appendChild(totalTable);
 	totalTable.setAttribute('id', 'thisTotalTable');
+	totalTable.setAttribute('width', '100%');
+
+
+	alert(tableCell8.childNodes[0]);
 };
 
 
