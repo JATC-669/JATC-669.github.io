@@ -10448,29 +10448,42 @@ button:hover {
 table thead tr td, table tbody tr td {
   color: white;
 }
-/* line 131, ../scss/_style.scss */
+/* line 129, ../scss/_style.scss */
+table thead tr th {
+  border: 1px solid #444;
+  color: white;
+  text-align: center;
+}
+/* line 136, ../scss/_style.scss */
 table td {
   border: 1px solid #444;
 }
 
-/* line 139, ../scss/_style.scss */
+/* line 144, ../scss/_style.scss */
 .new-intake input {
   margin: 0;
 }
-/* line 144, ../scss/_style.scss */
+/* line 149, ../scss/_style.scss */
 .new-intake button {
   margin: 0;
   padding: .75em 0;
 }
 
-/* line 151, ../scss/_style.scss */
+/* line 156, ../scss/_style.scss */
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-/* line 156, ../scss/_style.scss */
+/* line 161, ../scss/_style.scss */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+/* line 168, ../scss/_style.scss */
+.lesson-schedule tbody tr td {
+  border: 1px solid #444;
+  color: white;
+  text-align: center;
 }

@@ -159,7 +159,7 @@ function addLog() {
 	tableRow.appendChild(tableCell9);
 	tableRow.appendChild(tableCell10);
 
-
+	tableCell10.setAttribute('id', 'chris')
 
 	/* Defines the TBODY element */
 	var tableBody = document.getElementById('tableBody');
@@ -255,12 +255,14 @@ function addLog() {
 	totalTable.setAttribute('id', 'thisTotalTable');
 	totalTable.setAttribute('width', '100%');
 
+	/*
+	var ehh = tableBody.querySelector("td").innerHTML;
+	alert(ehh);
+	*/
 
-	alert(tableCell8.childNodes[0]);
+	var ehh = document.getElementById('chris');
+	alert(ehh);
 };
-
-
-
 
 
 
