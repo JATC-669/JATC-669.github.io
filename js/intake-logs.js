@@ -159,7 +159,7 @@ function addLog() {
 	tableRow.appendChild(tableCell9);
 	tableRow.appendChild(tableCell10);
 
-	tableCell10.setAttribute('id', 'chris')
+	tableCell10.setAttribute('id', 'totalCostBySubmision')
 
 	/* Defines the TBODY element */
 	var tableBody = document.getElementById('tableBody');
@@ -219,7 +219,7 @@ function addLog() {
 	var totalDolalSignContent = document.createTextNode('$');
 
 	var totalCost             = document.createElement('td');
-	var totalCostContent      = document.createTextNode('3.5');
+	var totalCostContent      = document.createTextNode('fish');
 	
 
 	/* Adds the 'text-right' class to the total row title cell */
