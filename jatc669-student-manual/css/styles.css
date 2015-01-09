@@ -10323,43 +10323,49 @@ th.hide-for-touch {
     display: table-cell !important;
   }
 }
-/* line 4, ../scss/_style.scss */
+/* line 2, ../scss/_style.scss */
+b {
+  font-weight: inherit;
+  color: #ff3300;
+}
+
+/* line 10, ../scss/_style.scss */
 .top-bar .name h1 a {
   font-weight: bold;
 }
-/* line 9, ../scss/_style.scss */
+/* line 15, ../scss/_style.scss */
 .top-bar .toggle-topbar.menu-icon a {
   font-weight: 100;
 }
-/* line 14, ../scss/_style.scss */
+/* line 20, ../scss/_style.scss */
 .top-bar .top-bar-section ul li.active > a {
   background-color: #00a9cc;
 }
 
-/* line 20, ../scss/_style.scss */
+/* line 26, ../scss/_style.scss */
 .full-expanded {
   width: 100%;
   background: #00a9cc;
 }
 
-/* line 26, ../scss/_style.scss */
+/* line 32, ../scss/_style.scss */
 img {
   margin-bottom: 2vw;
 }
 
-/* line 31, ../scss/_style.scss */
+/* line 37, ../scss/_style.scss */
 a {
   color: #00a9cc;
 }
 
-/* line 36, ../scss/_style.scss */
+/* line 42, ../scss/_style.scss */
 .header {
   padding-top: 3vw;
   padding-bottom: 3vw;
   width: 100%;
 }
 
-/* line 44, ../scss/_style.scss */
+/* line 50, ../scss/_style.scss */
 h1 {
   font-size: 7vw;
   line-height: 9vw;
@@ -10368,50 +10374,61 @@ h1 {
   color: #fff;
 }
 
-/* line 54, ../scss/_style.scss */
+/* line 60, ../scss/_style.scss */
 .global-nav {
   font-family: "Lato", sans-serif;
 }
-/* line 58, ../scss/_style.scss */
+/* line 64, ../scss/_style.scss */
 .global-nav ul {
   list-style-type: none;
   margin-left: 0;
 }
-/* line 64, ../scss/_style.scss */
+/* line 70, ../scss/_style.scss */
 .global-nav li {
   border-bottom: 1px solid #ccc;
   padding-top: 2vw;
   padding-bottom: 2vw;
   line-height: 6vw;
 }
-/* line 72, ../scss/_style.scss */
+/* line 78, ../scss/_style.scss */
 .global-nav .chapter-number {
   font-weight: 400;
   font-style: italic;
   font-size: 4vw;
   color: #666;
 }
-/* line 80, ../scss/_style.scss */
+/* line 86, ../scss/_style.scss */
 .global-nav .chapter-title {
   font-weight: 900;
   font-size: 4vw;
 }
 
-/* line 87, ../scss/_style.scss */
+/* line 93, ../scss/_style.scss */
 article {
   font-family: "Lato", sans-serif;
   padding-top: 2vw;
   padding-bottom: 2vw;
   line-height: 6vw;
 }
-/* line 95, ../scss/_style.scss */
+/* line 100, ../scss/_style.scss */
 article p {
   font-size: 5vw;
   font-weight: 400;
   color: #666;
 }
+/* line 107, ../scss/_style.scss */
+article ol {
+  font-size: 5vw;
+  font-weight: 400;
+  color: #666;
+}
+/* line 113, ../scss/_style.scss */
+article ol li {
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+}
 
-/* line 103, ../scss/_style.scss */
+/* line 121, ../scss/_style.scss */
 button {
   font-size: 5vw;
   padding-top: 4vw;
@@ -10424,47 +10441,51 @@ button {
 }
 
 @media only screen and (min-width: 64.063em) {
-  /* line 117, ../scss/_style.scss */
+  /* line 135, ../scss/_style.scss */
   .header {
     padding-top: 1vw;
     padding-bottom: 1vw;
   }
 
-  /* line 123, ../scss/_style.scss */
+  /* line 141, ../scss/_style.scss */
   h1 {
     font-size: 3vw;
-    line-height: 3vw;
+    line-height: 3.5vw;
   }
 
-  /* line 132, ../scss/_style.scss */
+  /* line 150, ../scss/_style.scss */
   .global-nav li {
     padding-top: 1vw;
     padding-bottom: 1vw;
     line-height: 2vw;
   }
-  /* line 139, ../scss/_style.scss */
+  /* line 157, ../scss/_style.scss */
   .global-nav .chapter-number {
     font-size: 1.5vw;
   }
-  /* line 144, ../scss/_style.scss */
+  /* line 162, ../scss/_style.scss */
   .global-nav .chapter-title {
     font-size: 1.5vw;
   }
 
-  /* line 150, ../scss/_style.scss */
+  /* line 168, ../scss/_style.scss */
   article {
     padding-top: 2vw;
     padding-bottom: 2vw;
     line-height: 4vw;
   }
-  /* line 156, ../scss/_style.scss */
+  /* line 174, ../scss/_style.scss */
   article p {
     font-size: 1.5vw;
   }
-
-  /* line 162, ../scss/_style.scss */
-  button {
+  /* line 179, ../scss/_style.scss */
+  article ol {
     font-size: 1.5vw;
+  }
+
+  /* line 185, ../scss/_style.scss */
+  button {
+    font-size: 1vw;
     padding-top: 1vw;
     padding-bottom: 1vw;
     border-bottom: none;
