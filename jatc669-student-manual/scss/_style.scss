@@ -26,12 +26,13 @@ b
 {
 	width: 100%;
 	background: $blue;
+
+	img
+	{
+		width: 100vw;
+	}
 }
 
-img
-{
-	margin-bottom: 2vw;
-}
 
 a
 {
@@ -53,7 +54,15 @@ h1
 	font-family: $header-text;
 	font-weight: bold;
 	color: #fff;
+}
 
+h2
+{
+	font-size: 7vw;
+	line-height: 9vw;
+	font-family: $header-text;
+	font-weight: bold;
+	color: #555;
 }
 
 .global-nav
@@ -103,7 +112,7 @@ article
 		color: #666;
 	}
 
-	ol
+	ol, ul
 	{
 		font-size: 5vw;
 		font-weight: 400;
@@ -111,8 +120,8 @@ article
 
 		li
 		{
-			padding-top: 1vw;
-			padding-bottom: 1vw;
+			padding-top: 4vw;
+			padding-bottom: 4vw;
 		}	
 	}
 }
@@ -138,6 +147,12 @@ button
 }
 
 h1
+{
+	font-size: 3vw;
+	line-height: 3.5vw;
+}
+
+h2
 {
 	font-size: 3vw;
 	line-height: 3.5vw;
@@ -175,9 +190,15 @@ article
 		font-size: 1.5vw;
 	}
 
-	ol
+	ol, ul
 	{
 		font-size: 1.5vw;
+
+		li
+		{
+			padding-top: 1.5vw;
+			padding-bottom: 1.5vw;
+		}
 	}
 }
 

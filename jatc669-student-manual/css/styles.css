@@ -10347,25 +10347,24 @@ b {
   width: 100%;
   background: #00a9cc;
 }
-
-/* line 32, ../scss/_style.scss */
-img {
-  margin-bottom: 2vw;
+/* line 31, ../scss/_style.scss */
+.full-expanded img {
+  width: 100vw;
 }
 
-/* line 37, ../scss/_style.scss */
+/* line 38, ../scss/_style.scss */
 a {
   color: #00a9cc;
 }
 
-/* line 42, ../scss/_style.scss */
+/* line 43, ../scss/_style.scss */
 .header {
   padding-top: 3vw;
   padding-bottom: 3vw;
   width: 100%;
 }
 
-/* line 50, ../scss/_style.scss */
+/* line 51, ../scss/_style.scss */
 h1 {
   font-size: 7vw;
   line-height: 9vw;
@@ -10375,60 +10374,69 @@ h1 {
 }
 
 /* line 60, ../scss/_style.scss */
+h2 {
+  font-size: 7vw;
+  line-height: 9vw;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: bold;
+  color: #555;
+}
+
+/* line 69, ../scss/_style.scss */
 .global-nav {
   font-family: "Lato", sans-serif;
 }
-/* line 64, ../scss/_style.scss */
+/* line 73, ../scss/_style.scss */
 .global-nav ul {
   list-style-type: none;
   margin-left: 0;
 }
-/* line 70, ../scss/_style.scss */
+/* line 79, ../scss/_style.scss */
 .global-nav li {
   border-bottom: 1px solid #ccc;
   padding-top: 2vw;
   padding-bottom: 2vw;
   line-height: 6vw;
 }
-/* line 78, ../scss/_style.scss */
+/* line 87, ../scss/_style.scss */
 .global-nav .chapter-number {
   font-weight: 400;
   font-style: italic;
   font-size: 4vw;
   color: #666;
 }
-/* line 86, ../scss/_style.scss */
+/* line 95, ../scss/_style.scss */
 .global-nav .chapter-title {
   font-weight: 900;
   font-size: 4vw;
 }
 
-/* line 93, ../scss/_style.scss */
+/* line 102, ../scss/_style.scss */
 article {
   font-family: "Lato", sans-serif;
   padding-top: 2vw;
   padding-bottom: 2vw;
   line-height: 6vw;
 }
-/* line 100, ../scss/_style.scss */
+/* line 109, ../scss/_style.scss */
 article p {
   font-size: 5vw;
   font-weight: 400;
   color: #666;
 }
-/* line 107, ../scss/_style.scss */
-article ol {
+/* line 116, ../scss/_style.scss */
+article ol, article ul {
   font-size: 5vw;
   font-weight: 400;
   color: #666;
 }
-/* line 113, ../scss/_style.scss */
-article ol li {
-  padding-top: 1vw;
-  padding-bottom: 1vw;
+/* line 122, ../scss/_style.scss */
+article ol li, article ul li {
+  padding-top: 4vw;
+  padding-bottom: 4vw;
 }
 
-/* line 121, ../scss/_style.scss */
+/* line 130, ../scss/_style.scss */
 button {
   font-size: 5vw;
   padding-top: 4vw;
@@ -10441,49 +10449,60 @@ button {
 }
 
 @media only screen and (min-width: 64.063em) {
-  /* line 135, ../scss/_style.scss */
+  /* line 144, ../scss/_style.scss */
   .header {
     padding-top: 1vw;
     padding-bottom: 1vw;
   }
 
-  /* line 141, ../scss/_style.scss */
+  /* line 150, ../scss/_style.scss */
   h1 {
     font-size: 3vw;
     line-height: 3.5vw;
   }
 
-  /* line 150, ../scss/_style.scss */
+  /* line 156, ../scss/_style.scss */
+  h2 {
+    font-size: 3vw;
+    line-height: 3.5vw;
+  }
+
+  /* line 165, ../scss/_style.scss */
   .global-nav li {
     padding-top: 1vw;
     padding-bottom: 1vw;
     line-height: 2vw;
   }
-  /* line 157, ../scss/_style.scss */
+  /* line 172, ../scss/_style.scss */
   .global-nav .chapter-number {
     font-size: 1.5vw;
   }
-  /* line 162, ../scss/_style.scss */
+  /* line 177, ../scss/_style.scss */
   .global-nav .chapter-title {
     font-size: 1.5vw;
   }
 
-  /* line 168, ../scss/_style.scss */
+  /* line 183, ../scss/_style.scss */
   article {
     padding-top: 2vw;
     padding-bottom: 2vw;
     line-height: 4vw;
   }
-  /* line 174, ../scss/_style.scss */
+  /* line 189, ../scss/_style.scss */
   article p {
     font-size: 1.5vw;
   }
-  /* line 179, ../scss/_style.scss */
-  article ol {
+  /* line 194, ../scss/_style.scss */
+  article ol, article ul {
     font-size: 1.5vw;
   }
+  /* line 198, ../scss/_style.scss */
+  article ol li, article ul li {
+    padding-top: 1.5vw;
+    padding-bottom: 1.5vw;
+  }
 
-  /* line 185, ../scss/_style.scss */
+  /* line 206, ../scss/_style.scss */
   button {
     font-size: 1vw;
     padding-top: 1vw;
