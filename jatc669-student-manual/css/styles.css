@@ -10352,19 +10352,24 @@ b {
   width: 100vw;
 }
 
-/* line 38, ../scss/_style.scss */
+/* line 37, ../scss/_style.scss */
+.top-nav {
+  margin-top: 2vw;
+}
+
+/* line 42, ../scss/_style.scss */
 a {
   color: #00a9cc;
 }
 
-/* line 43, ../scss/_style.scss */
+/* line 47, ../scss/_style.scss */
 .header {
   padding-top: 3vw;
   padding-bottom: 3vw;
   width: 100%;
 }
 
-/* line 51, ../scss/_style.scss */
+/* line 55, ../scss/_style.scss */
 h1 {
   font-size: 7vw;
   line-height: 9vw;
@@ -10373,7 +10378,7 @@ h1 {
   color: #fff;
 }
 
-/* line 60, ../scss/_style.scss */
+/* line 64, ../scss/_style.scss */
 h2 {
   font-size: 7vw;
   line-height: 9vw;
@@ -10382,70 +10387,70 @@ h2 {
   color: #555;
 }
 
-/* line 69, ../scss/_style.scss */
+/* line 73, ../scss/_style.scss */
 .global-nav {
   font-family: "Lato", sans-serif;
 }
-/* line 73, ../scss/_style.scss */
+/* line 77, ../scss/_style.scss */
 .global-nav ul {
   list-style-type: none;
   margin-left: 0;
 }
-/* line 79, ../scss/_style.scss */
+/* line 83, ../scss/_style.scss */
 .global-nav li {
   border-bottom: 1px solid #ccc;
   padding-top: 2vw;
   padding-bottom: 2vw;
   line-height: 6vw;
 }
-/* line 87, ../scss/_style.scss */
+/* line 91, ../scss/_style.scss */
 .global-nav .chapter-number {
   font-weight: 400;
   font-style: italic;
   font-size: 4vw;
   color: #666;
 }
-/* line 95, ../scss/_style.scss */
+/* line 99, ../scss/_style.scss */
 .global-nav .chapter-title {
   font-weight: 900;
   font-size: 4vw;
 }
 
-/* line 102, ../scss/_style.scss */
+/* line 106, ../scss/_style.scss */
 article {
   font-family: "Lato", sans-serif;
   padding-top: 2vw;
   padding-bottom: 2vw;
   line-height: 6vw;
 }
-/* line 109, ../scss/_style.scss */
+/* line 113, ../scss/_style.scss */
 article p {
   font-size: 5vw;
   font-weight: 400;
   color: #666;
   margin-bottom: 6vw;
 }
-/* line 117, ../scss/_style.scss */
+/* line 121, ../scss/_style.scss */
 article .panel.callout {
   margin-bottom: 7vw;
 }
-/* line 122, ../scss/_style.scss */
+/* line 126, ../scss/_style.scss */
 article ol, article ul {
   font-size: 5vw;
   font-weight: 400;
   color: #666;
 }
-/* line 128, ../scss/_style.scss */
+/* line 132, ../scss/_style.scss */
 article ol li, article ul li {
   padding-top: 4vw;
   padding-bottom: 4vw;
 }
-/* line 135, ../scss/_style.scss */
+/* line 139, ../scss/_style.scss */
 article h2 {
   margin-top: 8vw;
 }
 
-/* line 141, ../scss/_style.scss */
+/* line 145, ../scss/_style.scss */
 button {
   font-size: 5vw;
   padding-top: 4vw;
@@ -10458,69 +10463,69 @@ button {
 }
 
 @media only screen and (min-width: 64.063em) {
-  /* line 155, ../scss/_style.scss */
+  /* line 159, ../scss/_style.scss */
   .header {
     padding-top: 1vw;
     padding-bottom: 1vw;
   }
 
-  /* line 161, ../scss/_style.scss */
+  /* line 165, ../scss/_style.scss */
   h1 {
     font-size: 3vw;
     line-height: 3.5vw;
   }
 
-  /* line 167, ../scss/_style.scss */
+  /* line 171, ../scss/_style.scss */
   h2 {
     font-size: 3vw;
     line-height: 3.5vw;
   }
 
-  /* line 176, ../scss/_style.scss */
+  /* line 180, ../scss/_style.scss */
   .global-nav li {
     padding-top: 1vw;
     padding-bottom: 1vw;
     line-height: 2vw;
   }
-  /* line 183, ../scss/_style.scss */
+  /* line 187, ../scss/_style.scss */
   .global-nav .chapter-number {
     font-size: 1.5vw;
   }
-  /* line 188, ../scss/_style.scss */
+  /* line 192, ../scss/_style.scss */
   .global-nav .chapter-title {
     font-size: 1.5vw;
   }
 
-  /* line 194, ../scss/_style.scss */
+  /* line 198, ../scss/_style.scss */
   article {
     padding-top: 2vw;
     padding-bottom: 2vw;
     line-height: 4vw;
   }
-  /* line 200, ../scss/_style.scss */
+  /* line 204, ../scss/_style.scss */
   article p {
     font-size: 1.5vw;
     margin-bottom: 2vw;
   }
-  /* line 206, ../scss/_style.scss */
+  /* line 210, ../scss/_style.scss */
   article .panel.callout {
     margin-bottom: 4vw;
   }
-  /* line 211, ../scss/_style.scss */
+  /* line 215, ../scss/_style.scss */
   article ol, article ul {
     font-size: 1.5vw;
   }
-  /* line 215, ../scss/_style.scss */
+  /* line 219, ../scss/_style.scss */
   article ol li, article ul li {
-    padding-top: 1.5vw;
-    padding-bottom: 1.5vw;
+    padding-top: 1.25vw;
+    padding-bottom: 1.25vw;
   }
-  /* line 222, ../scss/_style.scss */
+  /* line 226, ../scss/_style.scss */
   article h2 {
     margin-top: 4vw;
   }
 
-  /* line 228, ../scss/_style.scss */
+  /* line 232, ../scss/_style.scss */
   button {
     font-size: 1vw;
     padding-top: 1vw;
