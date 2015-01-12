@@ -1,3 +1,16 @@
+.fullWidth
+{
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: initial;
+   background-color: #333;
+   color: $blue;
+   padding-top: 2vw;
+   padding-bottom: 2vw;
+}
+
+
 b
 {
 	font-weight: inherit;
@@ -152,6 +165,92 @@ button
 	margin-bottom: 0;
 	border-bottom: 1px solid #fff;
 }
+
+@media only screen and (min-width: 40.063em) {
+
+.header
+{
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+}
+
+h1
+{
+	font-size: 3vw;
+	line-height: 3.5vw;
+}
+
+h2
+{
+	font-size: 3vw;
+	line-height: 3.5vw;
+}
+
+.global-nav
+{
+
+	li
+	{
+		padding-top: 1vw;
+		padding-bottom: 1vw;
+		line-height: 2.75vw;
+	}
+
+	.chapter-number
+	{
+		font-size: 2vw;
+	}
+
+	.chapter-title
+	{
+		font-size: 2vw;
+	}
+}
+
+article
+{
+	padding-top: 2vw;
+	padding-bottom: 2vw;
+	line-height: 4vw;
+
+	p
+	{
+		font-size: 2.5vw;
+		margin-bottom: 2.5vw;
+	}
+
+	.panel.callout
+	{
+		margin-bottom: 5vw;
+	}
+
+	ol, ul
+	{
+		font-size:2.5vw;
+
+		li
+		{
+			padding-top: 1.25vw;
+			padding-bottom: 1.25vw;
+		}
+	}
+
+	h2
+	{
+		margin-top: 4vw;
+	}
+}
+
+button
+{
+	font-size: 2vw;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+	border-bottom: none;
+	margin-bottom: 2vw;
+}
+
+} /* min-width 641px, medium screens */
 
 @media only screen and (min-width: 64.063em) {
 

@@ -10324,52 +10324,64 @@ th.hide-for-touch {
   }
 }
 /* line 2, ../scss/_style.scss */
+.fullWidth {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: initial;
+  background-color: #333;
+  color: #00a9cc;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+}
+
+/* line 15, ../scss/_style.scss */
 b {
   font-weight: inherit;
   color: #ff3300;
 }
 
-/* line 10, ../scss/_style.scss */
+/* line 23, ../scss/_style.scss */
 .top-bar .name h1 a {
   font-weight: bold;
 }
-/* line 15, ../scss/_style.scss */
+/* line 28, ../scss/_style.scss */
 .top-bar .toggle-topbar.menu-icon a {
   font-weight: 100;
 }
-/* line 20, ../scss/_style.scss */
+/* line 33, ../scss/_style.scss */
 .top-bar .top-bar-section ul li.active > a {
   background-color: #00a9cc;
 }
 
-/* line 26, ../scss/_style.scss */
+/* line 39, ../scss/_style.scss */
 .full-expanded {
   width: 100%;
   background: #00a9cc;
 }
-/* line 31, ../scss/_style.scss */
+/* line 44, ../scss/_style.scss */
 .full-expanded img {
   width: 100vw;
 }
 
-/* line 37, ../scss/_style.scss */
+/* line 50, ../scss/_style.scss */
 .top-nav {
   margin-top: 2vw;
 }
 
-/* line 42, ../scss/_style.scss */
+/* line 55, ../scss/_style.scss */
 a {
   color: #00a9cc;
 }
 
-/* line 47, ../scss/_style.scss */
+/* line 60, ../scss/_style.scss */
 .header {
   padding-top: 3vw;
   padding-bottom: 3vw;
   width: 100%;
 }
 
-/* line 55, ../scss/_style.scss */
+/* line 68, ../scss/_style.scss */
 h1 {
   font-size: 7vw;
   line-height: 9vw;
@@ -10378,7 +10390,7 @@ h1 {
   color: #fff;
 }
 
-/* line 64, ../scss/_style.scss */
+/* line 77, ../scss/_style.scss */
 h2 {
   font-size: 7vw;
   line-height: 9vw;
@@ -10387,70 +10399,70 @@ h2 {
   color: #555;
 }
 
-/* line 73, ../scss/_style.scss */
+/* line 86, ../scss/_style.scss */
 .global-nav {
   font-family: "Lato", sans-serif;
 }
-/* line 77, ../scss/_style.scss */
+/* line 90, ../scss/_style.scss */
 .global-nav ul {
   list-style-type: none;
   margin-left: 0;
 }
-/* line 83, ../scss/_style.scss */
+/* line 96, ../scss/_style.scss */
 .global-nav li {
   border-bottom: 1px solid #ccc;
   padding-top: 2vw;
   padding-bottom: 2vw;
   line-height: 6vw;
 }
-/* line 91, ../scss/_style.scss */
+/* line 104, ../scss/_style.scss */
 .global-nav .chapter-number {
   font-weight: 400;
   font-style: italic;
   font-size: 4vw;
   color: #666;
 }
-/* line 99, ../scss/_style.scss */
+/* line 112, ../scss/_style.scss */
 .global-nav .chapter-title {
   font-weight: 900;
   font-size: 4vw;
 }
 
-/* line 106, ../scss/_style.scss */
+/* line 119, ../scss/_style.scss */
 article {
   font-family: "Lato", sans-serif;
   padding-top: 2vw;
   padding-bottom: 2vw;
   line-height: 6vw;
 }
-/* line 113, ../scss/_style.scss */
+/* line 126, ../scss/_style.scss */
 article p {
   font-size: 5vw;
   font-weight: 400;
   color: #666;
   margin-bottom: 6vw;
 }
-/* line 121, ../scss/_style.scss */
+/* line 134, ../scss/_style.scss */
 article .panel.callout {
   margin-bottom: 7vw;
 }
-/* line 126, ../scss/_style.scss */
+/* line 139, ../scss/_style.scss */
 article ol, article ul {
   font-size: 5vw;
   font-weight: 400;
   color: #666;
 }
-/* line 132, ../scss/_style.scss */
+/* line 145, ../scss/_style.scss */
 article ol li, article ul li {
   padding-top: 4vw;
   padding-bottom: 4vw;
 }
-/* line 139, ../scss/_style.scss */
+/* line 152, ../scss/_style.scss */
 article h2 {
   margin-top: 8vw;
 }
 
-/* line 145, ../scss/_style.scss */
+/* line 158, ../scss/_style.scss */
 button {
   font-size: 5vw;
   padding-top: 4vw;
@@ -10462,70 +10474,143 @@ button {
   border-bottom: 1px solid #fff;
 }
 
-@media only screen and (min-width: 64.063em) {
-  /* line 159, ../scss/_style.scss */
+@media only screen and (min-width: 40.063em) {
+  /* line 172, ../scss/_style.scss */
   .header {
     padding-top: 1vw;
     padding-bottom: 1vw;
   }
 
-  /* line 165, ../scss/_style.scss */
+  /* line 178, ../scss/_style.scss */
   h1 {
     font-size: 3vw;
     line-height: 3.5vw;
   }
 
-  /* line 171, ../scss/_style.scss */
+  /* line 184, ../scss/_style.scss */
   h2 {
     font-size: 3vw;
     line-height: 3.5vw;
   }
 
-  /* line 180, ../scss/_style.scss */
+  /* line 193, ../scss/_style.scss */
   .global-nav li {
     padding-top: 1vw;
     padding-bottom: 1vw;
-    line-height: 2vw;
+    line-height: 2.75vw;
   }
-  /* line 187, ../scss/_style.scss */
+  /* line 200, ../scss/_style.scss */
   .global-nav .chapter-number {
-    font-size: 1.5vw;
+    font-size: 2vw;
   }
-  /* line 192, ../scss/_style.scss */
+  /* line 205, ../scss/_style.scss */
   .global-nav .chapter-title {
-    font-size: 1.5vw;
+    font-size: 2vw;
   }
 
-  /* line 198, ../scss/_style.scss */
+  /* line 211, ../scss/_style.scss */
   article {
     padding-top: 2vw;
     padding-bottom: 2vw;
     line-height: 4vw;
   }
-  /* line 204, ../scss/_style.scss */
+  /* line 217, ../scss/_style.scss */
   article p {
-    font-size: 1.5vw;
-    margin-bottom: 2vw;
+    font-size: 2.5vw;
+    margin-bottom: 2.5vw;
   }
-  /* line 210, ../scss/_style.scss */
+  /* line 223, ../scss/_style.scss */
   article .panel.callout {
-    margin-bottom: 4vw;
+    margin-bottom: 5vw;
   }
-  /* line 215, ../scss/_style.scss */
+  /* line 228, ../scss/_style.scss */
   article ol, article ul {
-    font-size: 1.5vw;
+    font-size: 2.5vw;
   }
-  /* line 219, ../scss/_style.scss */
+  /* line 232, ../scss/_style.scss */
   article ol li, article ul li {
     padding-top: 1.25vw;
     padding-bottom: 1.25vw;
   }
-  /* line 226, ../scss/_style.scss */
+  /* line 239, ../scss/_style.scss */
   article h2 {
     margin-top: 4vw;
   }
 
-  /* line 232, ../scss/_style.scss */
+  /* line 245, ../scss/_style.scss */
+  button {
+    font-size: 2vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    border-bottom: none;
+    margin-bottom: 2vw;
+  }
+}
+/* min-width 641px, medium screens */
+@media only screen and (min-width: 64.063em) {
+  /* line 258, ../scss/_style.scss */
+  .header {
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+  }
+
+  /* line 264, ../scss/_style.scss */
+  h1 {
+    font-size: 3vw;
+    line-height: 3.5vw;
+  }
+
+  /* line 270, ../scss/_style.scss */
+  h2 {
+    font-size: 3vw;
+    line-height: 3.5vw;
+  }
+
+  /* line 279, ../scss/_style.scss */
+  .global-nav li {
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    line-height: 2vw;
+  }
+  /* line 286, ../scss/_style.scss */
+  .global-nav .chapter-number {
+    font-size: 1.5vw;
+  }
+  /* line 291, ../scss/_style.scss */
+  .global-nav .chapter-title {
+    font-size: 1.5vw;
+  }
+
+  /* line 297, ../scss/_style.scss */
+  article {
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    line-height: 4vw;
+  }
+  /* line 303, ../scss/_style.scss */
+  article p {
+    font-size: 1.5vw;
+    margin-bottom: 2vw;
+  }
+  /* line 309, ../scss/_style.scss */
+  article .panel.callout {
+    margin-bottom: 4vw;
+  }
+  /* line 314, ../scss/_style.scss */
+  article ol, article ul {
+    font-size: 1.5vw;
+  }
+  /* line 318, ../scss/_style.scss */
+  article ol li, article ul li {
+    padding-top: 1.25vw;
+    padding-bottom: 1.25vw;
+  }
+  /* line 325, ../scss/_style.scss */
+  article h2 {
+    margin-top: 4vw;
+  }
+
+  /* line 331, ../scss/_style.scss */
   button {
     font-size: 1vw;
     padding-top: 1vw;
