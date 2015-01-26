@@ -260,8 +260,6 @@ function addLog() {
 	alert(ehh);
 	*/
 
-	var ehh = document.getElementById('chris');
-	alert(ehh);
 };
 
 
