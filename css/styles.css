@@ -10369,24 +10369,34 @@ h3 {
 }
 
 /* line 44, ../scss/_style.scss */
+p {
+  color: white;
+}
+
+/* line 49, ../scss/_style.scss */
+label {
+  color: #cccccc;
+}
+
+/* line 54, ../scss/_style.scss */
 button {
   font-family: "Roboto Slab", serif;
   border: 6px solid #006a93;
   background-color: #222222;
 }
 
-/* line 51, ../scss/_style.scss */
+/* line 61, ../scss/_style.scss */
 button:hover {
   border: 6px solid #00567f;
 }
 
-/* line 56, ../scss/_style.scss */
+/* line 66, ../scss/_style.scss */
 .tabs dd {
   width: 33.3333%;
   font-family: "Roboto Slab", serif;
 }
 
-/* line 63, ../scss/_style.scss */
+/* line 73, ../scss/_style.scss */
 .tabs dd > a {
   padding: 10px;
   border: 6px solid #006a93;
@@ -10397,91 +10407,91 @@ button:hover {
   padding: .9em 0;
 }
 
-/* line 74, ../scss/_style.scss */
+/* line 84, ../scss/_style.scss */
 .tabs dd > a:hover {
   transition: background-color 0.5s ease;
   background-color: #007ea7;
 }
 
-/* line 80, ../scss/_style.scss */
+/* line 90, ../scss/_style.scss */
 .tabs dd.active a, .tabs .tab-title.active a {
   background-color: #0b89b2;
   color: white;
 }
 
-/* line 86, ../scss/_style.scss */
+/* line 96, ../scss/_style.scss */
 .tabs-content ul {
   list-style-type: none;
   margin-left: 0;
 }
 
-/* line 93, ../scss/_style.scss */
+/* line 103, ../scss/_style.scss */
 .accordion .accordion-navigation > a, .accordion dd > #panel1, .accordion .accordion-navigation > a, .accordion dd > #panel2, .accordion dd > #panel3, .accordion dd > #panel4, .accordion dd > #panel5, .accordion dd > #panel6 {
   padding: 0;
   background: none;
 }
 
-/* line 99, ../scss/_style.scss */
+/* line 109, ../scss/_style.scss */
 .accordion .accordion-navigation.active > a, .accordion dd.active > a {
   background: none;
 }
 
-/* line 104, ../scss/_style.scss */
+/* line 114, ../scss/_style.scss */
 .accordion .accordion-navigation > a:hover, .accordion dd > a:hover {
   background: none;
 }
 
-/* line 109, ../scss/_style.scss */
+/* line 119, ../scss/_style.scss */
 .contact-list {
   list-style-type: none;
   margin-right: 15px;
 }
 
-/* line 115, ../scss/_style.scss */
+/* line 125, ../scss/_style.scss */
 .contact-listing {
   color: #fff;
   border-bottom: 1px solid #444;
   padding-bottom: .5em;
 }
 
-/* line 124, ../scss/_style.scss */
+/* line 134, ../scss/_style.scss */
 table thead tr td, table tbody tr td {
   color: white;
 }
-/* line 129, ../scss/_style.scss */
+/* line 139, ../scss/_style.scss */
 table thead tr th {
   border: 1px solid #444;
   color: white;
   text-align: center;
 }
-/* line 136, ../scss/_style.scss */
+/* line 146, ../scss/_style.scss */
 table td {
   border: 1px solid #444;
 }
 
-/* line 144, ../scss/_style.scss */
+/* line 154, ../scss/_style.scss */
 .new-intake input {
   margin: 0;
 }
-/* line 149, ../scss/_style.scss */
+/* line 159, ../scss/_style.scss */
 .new-intake button {
   margin: 0;
   padding: .75em 0;
 }
 
-/* line 156, ../scss/_style.scss */
+/* line 166, ../scss/_style.scss */
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-/* line 161, ../scss/_style.scss */
+/* line 171, ../scss/_style.scss */
 input[type=number] {
   -moz-appearance: textfield;
 }
 
-/* line 168, ../scss/_style.scss */
+/* line 178, ../scss/_style.scss */
 .lesson-schedule tbody tr td {
   border: 1px solid #444;
   color: white;
