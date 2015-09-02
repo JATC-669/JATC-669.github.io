@@ -21,7 +21,7 @@
       </div>
     </header>
     
-    <main>
+    <main class="lesson-schedule">
 
       <div class="row">
         <div class="small-8 small-centered columns">
@@ -59,7 +59,7 @@
             </select>
 
             <label>Lesson(s) or Final</label>
-            <select name="type" id="type">
+            <select name="type" id="type"  onchange="courseScript()">
               <option selected="selected" disabled="disabled">Choose lessons or final</option>
               <option value="l" id="lessonSub">Lesson(s)</option>
               <option value="f" id="finalSub">Final</option>
@@ -87,7 +87,7 @@
 
             <div class="small-4 columns">
               <label>Day</label>
-              <select name="day" id="day" onchange="" size="1">
+              <select name="day" id="day"  onchange="courseScript()" size="1">
                 <option value="01">01</option>
                 <option value="02">02</option>
                 <option value="03">03</option>
@@ -124,13 +124,15 @@
 
             <div class="small-4 columns">
               <label>Year</label>
-              <select name="year" id="year" onchange="" size="1">
+              <select name="year" id="year" onchange="courseScript()" size="1">
                 <option value="2014">2014</option>
                 <option value="2015">2015</option>
               </select>
             </div>
-            <button type="button" onclick="findDates()">CLick</button>
           </form>
+          <div class="small-4 columns end">
+            <span id="recTimeOutput" class="recTimeOutput"></span>
+          </div>
         </div>
       </div>
 

@@ -1,6 +1,54 @@
+function courseScript ()
+{
+    var courseNumber = document.getElementById('course');
+    var submissionType = document.getElementById('type');
+    var submissionType = document.getElementById('type');
+    var shipMonth = document.getElementById('month');
+    var shipDay = document.getElementById('day');
+    var shipYear = document.getElementById('year');
+
+    var newDate = new Date(shipYear.value, shipMonth.value - 1, shipDay.value);
+
+    var arrayish = [newDate, newDate]
+
+    alert(arrayish )
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 function courseScript() {
 	
-	/* Lesson or Final 
+	 Lesson or Final 
 	var courseSelection = document.getElementById('course');
 	var course = courseSelection.value;
 
@@ -98,9 +146,9 @@ function courseScript() {
         break;
 	}
 
-	*/
+	
 
-	/* DATES Entry*/
+	/* DATES Entry
 	var monthField = document.getElementById('month')
 	var month = monthField.value;
 
@@ -235,4 +283,4 @@ function findDates() {
     alert(dStart)
 }
 
-
+*/

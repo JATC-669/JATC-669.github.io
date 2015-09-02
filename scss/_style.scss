@@ -174,11 +174,74 @@ input[type=number] {
 
 .lesson-schedule
 {
- tbody tr td
+	tbody tr td
 	{
 		border: 1px solid #444;
 		color: $white;
 		text-align: center;
 	}
 
+	.recTimeOutput
+	{
+		color: #fff;
+	}
+
+}
+
+table tfoot tr td
+{
+	color: #eee;
+}
+
+tbody, tfoot
+{
+	border-right: 1px solid #444;
+}
+
+table, thead, tfoot
+{
+	background: none;
+}
+
+/* CoC */
+
+.coc-body
+{
+	 background-color: white;
+	 padding: 0;
+	 margin: 0;
+}
+
+.coc-container
+{
+	background-color: red;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	width: 768px;
+	height: 994px;
+
+
+	h1
+	{
+		-ms-transform: rotate(90deg); /* IE 9 */
+	    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+	    transform: rotate(90deg);
+	    font-family: "Goudy Old Style";
+	    font-style: italic;
+	    font-size: 42pt;
+	    top: 45%;
+	    left: 190px;
+	    white-space: nowrap; 
+	    padding: 0;
+	    margin: 0;
+	    background-color: pink;
+	}
+
+	.dog
+	{
+		padding: 0;
+		margin: 0;
+		width: 100%;
+	}
 }

@@ -1,0 +1,57 @@
+/* CoC */
+
+.coc-body
+{
+	 background-color: white;
+	 padding: 0;
+	 margin: 0;
+}
+
+.coc-container
+{
+	background-color: red;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+}
+
+h1
+{
+
+	
+    position: absolute;  
+    padding: 0;
+    margin: 0; 
+    height: 994px;
+    width: 768px;
+    top: -90px;
+
+}
+
+span
+{
+	font-family: "Goudy Old Style";
+	display: block;
+    font-style: italic;
+    font-size: 42pt;
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+    position: absolute;
+    width: 100%;
+    top: 50vh;
+    text-align: center;
+}
+
+.dog
+{
+	padding: 0;
+	margin: 0;
+	width: 768px;
+}
+
+body
+{
+    size: auto;   /* auto is the initial value */
+        margin: 0mm;  /* this affects the margin in the printer settings */
+}

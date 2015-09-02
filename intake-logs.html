@@ -10,8 +10,8 @@
 
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
   </head>
-  <body>
-
+  <body onload="getDate()">
+  
     <header>
       <div class="row">
         <div class="small-12 medium-12 large-12 columns">
@@ -27,7 +27,7 @@
         <div class="small-12 columns">
           <h2>Intake Logs</h2>
         </div>
-        <div class="small-12 columns" id="tablesSection">
+        <div class="small-12 columns">
           <table width="100%">
             <thead>
 
@@ -39,38 +39,82 @@
                 <td width="10%">Course</td>
                 <td width="10%">Lesson #s</td>
                 <td width="9%">Final</td>
-                <td width="9%">Total Lessons Submitted</td>
+                <td width="9%">Total Submissions</td>
                 <td width="10%" colspan="2">Amount Due</td>
               </tr>
+
               <tr class="new-intake">
-                <td><input id="dateField" type="date"></td>
+                <td>
+                  <!-- DATE -->
+                  <input id="dateField" type="date">
+                </td>
                 <td>
                   <div class="row collapse prefix-radius">
-                    <div class="small-2 columns">
-                      <span class="prefix">@</span>
+                    <div class="small-4 columns">
+                      <span class="prefix">@00</span>
                     </div>
-                    <div class="small-10 columns">
-                    <input id="studentNumberField" type="text" autofocus = "autofocus">
+                    <div class="small-8 columns">
+                      <!-- Student ID Numbner -->
+                      <input id="studentId" type="text" autofocus = "autofocus">
+                    </div>  
                   </div>
                 </td>
-                <td><input id="studentLastName" type="text"></td>
-                <td><input id="studentFirstName" type="text"></td>
+                <td>
+                  <!-- LAST NAME -->
+                  <input id="lastName" type="text">
+                </td>
+                <td>
+                  <!-- FIRST NAME -->
+                  <input id="firstName" type="text">
+                </td>
                 <td>
                   <div class="row collapse prefix-radius">
                     <div class="small-6 columns">
                       <span class="prefix">SPF</span>
                     </div>
                     <div class="small-6 columns">
-                    <input id="course" type="text">
+                      <!-- COURSE NUMBER -->
+                      <input id="course" type="text">
+                    </div>
                   </div>
                 </td>
-                <td><input id="lessonField" type="text"></td>
-                <td class="text-center"><input id="finalField" type="text"></td>
-                <td colspan="3"><button onmousedown="removeTable()" onmouseup="addLog()" onmouseup="addLog()" class="expand">Add Log</button></td>
+                <td>
+                  <!-- LESSONS -->
+                  <input id="lessons" type="text">
+                </td>
+                <td class="text-center">
+                  <!-- FINAL INDICATOR -->
+                  <input id="finalIndicator" type="text">
+                </td>
+                <td colspan="3">
+                  <button class="expand" onclick="addLog()">Add Log</button>
+                </td>
               </tr>
+
             </thead>
-            <tbody id="tableBody">
+            <tbody id="intakeLog">
+              <!--
+              <tr>
+                
+                <td id="loggedDate"></td>
+                <td id="loggedStudentId"></td>
+                <td id="loggedLastName"></td>
+                <td id="loggedFirstName"></td>
+                <td id="loggedCourse"></td>
+                <td id="loggedLessons"></td>
+                <td id="loggedfinalIndicator"></td>
+              
+              </tr>
+              -->
             </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="6">&nbsp;</td>
+                <td>TOTALS</td>
+                <td id="individTotalSubs">Footer</td>
+                <td>Footer</td>
+              </tr>
+            </tfoot>
           </table>
 
           <!-- Total Tables -->

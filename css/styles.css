@@ -10497,3 +10497,63 @@ input[type=number] {
   color: white;
   text-align: center;
 }
+/* line 185, ../scss/_style.scss */
+.lesson-schedule .recTimeOutput {
+  color: #fff;
+}
+
+/* line 192, ../scss/_style.scss */
+table tfoot tr td {
+  color: #eee;
+}
+
+/* line 197, ../scss/_style.scss */
+tbody, tfoot {
+  border-right: 1px solid #444;
+}
+
+/* line 202, ../scss/_style.scss */
+table, thead, tfoot {
+  background: none;
+}
+
+/* CoC */
+/* line 209, ../scss/_style.scss */
+.coc-body {
+  background-color: white;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 216, ../scss/_style.scss */
+.coc-container {
+  background-color: red;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  width: 768px;
+  height: 994px;
+}
+/* line 226, ../scss/_style.scss */
+.coc-container h1 {
+  -ms-transform: rotate(90deg);
+  /* IE 9 */
+  -webkit-transform: rotate(90deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
+  font-family: "Goudy Old Style";
+  font-style: italic;
+  font-size: 42pt;
+  top: 45%;
+  left: 190px;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  background-color: pink;
+}
+/* line 242, ../scss/_style.scss */
+.coc-container .dog {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
