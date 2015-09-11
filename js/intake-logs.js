@@ -31,7 +31,35 @@ function addLog () {
 		       log.finalIndicator.value,];
 
 	// Caculates Total Submissions from an individual
-	var individualSubmissionTotal = log.lessons.value.split(",");
+	var individualSubmissionTotal = log.lessons.value.split(", ");
+
+		/* This loop runs through each of the array nodes to find out if it is a multi lesson entry */
+		for (var i = 0; i < individualSubmissionTotal.length; i++) {
+
+		/* If it is a single lesson, the array node is converted to 1 */
+		if  (individualSubmissionTotal[i].length <= 2) {
+				individualSubmissionTotal[i] = 1;
+		}
+		/* If it is a multi lesson, the node is split, and the total lession # is calculated. The result is added to the array node */
+		else if (individualSubmissionTotal[i].length >= 3) {
+			var multiLessons = individualSubmissionTotal[i].split("-");
+			var totalMultiLession = multiLessons[1] - multiLessons[0] + 1;
+			individualSubmissionTotal[i] = totalMultiLession;
+			};
+		};
+
+		var sum = individualSubmissionTotal.reduce(add, 0);
+
+			function add(a, b) {
+			    return a + b;
+			}
+
+			
+
+
+
+
+
 
 	// Counts the number of <tr>'s in the report log
 	var numberOfTrs = document.querySelectorAll('#intakeLog tr').length;
@@ -88,8 +116,8 @@ function addLog () {
 	document.getElementById("loggedCourse" + (numberOfTrs - 1)).innerHTML 		  = arr[4];
 	document.getElementById("loggedLessons" + (numberOfTrs - 1)).innerHTML 		  = arr[5];
 	document.getElementById("loggedfinalIndicator" + (numberOfTrs - 1)).innerHTML = arr[6];
-	document.getElementById("tableCellTotalSubs" + (numberOfTrs - 1)).innerHTML   = individualSubmissionTotal.length;
-	document.getElementById("tableCellCost" + (numberOfTrs - 1)).innerHTML        = "$" + (individualSubmissionTotal.length) * 3.25;
+	document.getElementById("tableCellTotalSubs" + (numberOfTrs - 1)).innerHTML   = sum;
+	document.getElementById("tableCellCost" + (numberOfTrs - 1)).innerHTML        = "$" + (sum) * 3.25;
 }
 
 
