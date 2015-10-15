@@ -7,12 +7,20 @@ var proctorFind = function () {
     alert('SITE: 1\n\nBarajas, Manuel\n\nPO Box 299399\nThornton, CO 80299\n\n303-927-9359');
   } 
 
+  else if (proctor === 'Spivey, Tony') {
+    alert('SITE: 1\n\nTony Spivey\n\nPO Box 200698\nDenver, CO 80220\n\n303-887-0710');
+  }
+
   else if (proctor === 'Payne, J. Brian') {
     alert('SITE: 2\n\nPayne, J. Brian\n116 Emmitsburg Rd.\nThurmont, MD 21788\n\n204-818-3163');
   }
 
   else if (proctor === 'Williams, James C.') {
     alert('SITE: 3\n\nWilliams, James C.\n2302 N. Beltline Apt. #331\nMesquite, TX 75150\n\n972-524-4079');
+  }
+
+  else if (proctor === 'Owen, Nathan G.') {
+    alert('SITE: 4\n\nOwen, Nathan G.\n380 Eric Christy Rd.\nMt. Washington, KY 40047\n\n502-445-1260');
   }
 
   else if (proctor === 'Hutto, Brian') {
@@ -35,16 +43,16 @@ var proctorFind = function () {
     alert('SITE: 10\n\nFulkerson, Christopher\n464 W. 900 S. Lot A\nCloverdale, IN 46120\n\n765-719-2295');
   }
 
-  else if (proctor === 'Boelens, Gary A.') {
-    alert('SITE: 11\n\nBoelens, Gary A.\n1937 E. Lusitano Loop\nSan Tan Valley, AZ 85140\n\n602-799-3968');
+  else if (proctor === 'Green, Nathan') {
+    alert('SITE: 11\n\nGreen, Nathan\n5614 W Shangri La Rd\nGlendale, AZ 85304\n\n623-388-7590');
   }
 
   else if (proctor === 'Wilcheck, Jeffery') {
     alert('SITE: 13\n\nWilcheck, Jeffery\nPO Box 111291\nAnchorage, AK 9951\n\n907-230-2869');
   }
 
-  else if (proctor === 'Christopherson, Jason') {
-    alert('SITE: 14\n\nChristopherson, Jason\n1501 lawnmount Dr. #408\nRound Rock, TX 78664\n\n325-660-3647');
+  else if (proctor === 'Michael, Collin') {
+    alert('SITE: 14\n\nMichael, Collin\n3152 Burks Ln.\nAustin, TX 78732\n\n619-456-5337');
   }
 
   else if (proctor === 'Beattie, George H.') {
@@ -77,6 +85,10 @@ var proctorFind = function () {
 
   else if (proctor === 'DIapico, Anthony') {
     alert('SITE: 25\n\nDIapico, Anthony\n602 S. 6th Ave. W\nNewton, IA 50208\n\n515-321-4679');
+  }
+
+  else if (proctor === 'Rolon, Ralph O.') {
+    alert('SITE: 26\n\nRolon, Ralph O.\n435 Franklin St\nWauseon, OH 43567\n\n419-450-3597');
   }
 
   else if (proctor === 'Holbrook, Kevin') {
@@ -163,7 +175,7 @@ var render = function () {
         || (added >= 180901 && added <= 180997)
         )
       {
-        alert('SITE: 1\n\nBarajas, Manuel\nPO Box 299399\nThornton, CO 80299\n\n303-927-9359');
+        alert('SITE: 1\n\n(A-L)\nBarajas, Manuel\nPO Box 299399\nThornton, CO 80299\n\n303-927-9359\n\n(M-Z)\nSpivey, Tony\nPO Box 200698\nDenver, CO 80220\n\n303-887-0710');
       }
 
       else if (
@@ -199,7 +211,7 @@ var render = function () {
 
       else if (
 
-        /* Site: 4\nInst: NONE */
+        /* Site: 4\nInst: Owen, Nathan G. */
 
            (added >= 140003 && added <= 140078)
         || (added >= 140104 && added <= 140468)
@@ -212,7 +224,7 @@ var render = function () {
         || (added >= 147513 && added <= 147635)
         )
       {
-        alert('SITE: 4\n\n\nInst: NONE');
+        alert('SITE: 4\n\nOwen, Nathan G.\n380 Eric Christy Rd.\nMt. Washington, KY 40047\n\n502-445-1260');
       }
 
       else if (
@@ -300,7 +312,7 @@ var render = function () {
 
       else if (
 
-        /* Site: 11\nInst: Boelens, Gary A. */
+        /* Site: 11\nInst: Green, Nathan */
 
            (added >= 185000 && added <= 185399)
         || (added >= 185500 && added <= 185599)
@@ -308,7 +320,7 @@ var render = function () {
 
         )
       {
-        alert('SITE: 11\n\nBoelens, Gary A.\n1937 E. Lusitano Loop\nSan Tan Valley, AZ 85140\n\n602-799-3968');
+        alert('SITE: 11\n\nGreen, Nathan\n3115 N. 29th Dr.\nPhoenix, AZ 85017\n\n623-388-7590');
       }
 
       else if (
@@ -338,14 +350,14 @@ var render = function () {
 
       else if (
 
-        /* Site: 14\nInst: Christopherson, Jason */
+        /* Site: 14\nInst: Michael, Collin */
 
            (added >= 176511 && added <= 176574)
         || (added >= 177900 && added <= 178299)
         || (added >= 178600 && added <= 178899)
         )
       {
-        alert('SITE: 14\n\nChristopherson, Jason\n1501 lawnmount Dr. #408\nRound Rock, TX 78664\n\n325-660-3647');
+        alert('SITE: 14\n\nMichael, Collin\n3152 Burks Ln.\nAustin, TX 78732\n\n619-456-5337');
       }
 
       else if (
@@ -529,7 +541,7 @@ var render = function () {
 
       else if (
 
-        /* Site: 26\nInst: NONE */
+        /* Site: 26\nInst: Rolon, Ralph O */
 
            (added >= 148301 && added <= 148397)
         || (added >= 148411 && added <= 148476)
@@ -543,7 +555,7 @@ var render = function () {
         || (added >= 149501 && added <= 149599)
         )
       {
-        alert('SITE: 26\n\nInst: NONE');
+        alert('SITE: 26\n\nRolon, Ralph O\n435 Franklin St\nWauseon, OH 43567\n\n419-450-3597');
       }
 
       else if (
