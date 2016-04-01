@@ -5,13 +5,17 @@ function valad() {
     var shipMonth = document.getElementById('month').value;
     var shipDay = document.getElementById('day').value;
     var shipYear = document.getElementById('year').value;
+    var shipMethod = document.getElementById('method').value;
+    document.getElementById('recTimeOutput').className = 'recTimeOutput not-fade';
 
-    if (courseNumber === 'dis' || submissionType === 'dis' || shipMonth === 'dis' || shipDay === 'dis' || shipYear === 'dis') {
+    if (courseNumber === 'dis' || submissionType === 'dis' || shipMonth === 'dis' || shipDay === 'dis' || shipYear === 'dis' || shipMethod === 'dis') {
+    
     }
 
     else {
         document.getElementById('submitButton').className = 'expand';
         document.getElementById('submitButton').innerHTML = 'SUBMIT';
+
     }
 };
 
@@ -21,8 +25,9 @@ function badClick() {
     var shipMonth = document.getElementById('month').value;
     var shipDay = document.getElementById('day').value;
     var shipYear = document.getElementById('year').value;
+    var shipMethod = document.getElementById('method').value;
 
-    if (courseNumber === 'dis' || submissionType === 'dis' || shipMonth === 'dis' || shipDay === 'dis' || shipYear === 'dis') {
+    if (courseNumber === 'dis' || submissionType === 'dis' || shipMonth === 'dis' || shipDay === 'dis' || shipYear === 'dis' || shipMethod === 'dis') {
 
         document.getElementById('submitButton').innerHTML = 'YOU HAVE UNSELECTED FIELDS';
     }
@@ -38,6 +43,10 @@ function courseScript() {
     var shipMonth = document.getElementById('month');
     var shipDay = document.getElementById('day');
     var shipYear = document.getElementById('year');
+    var shipMethod = document.getElementById('method').value;
+
+    var shipMethodNumber = Number(shipMethod);
+
     var output = document.getElementById('recTimeOutput');
     
     var shipDate = new Date(shipYear.value, shipMonth.value, shipDay.value)
@@ -74,14 +83,15 @@ function courseScript() {
     }
 
     if (courseNumber === '04' || courseNumber === '07' || courseNumber === '19') {
-        shipDate === shipDate.setDate(shipDate.getDate()+14+5);
+        shipDate === shipDate.setDate(shipDate.getDate()+shipMethodNumber+5);
 
         if (shipDate.getDay() === 6) {
             shipDate === shipDate.setDate(shipDate.getDate()+2);
             var weekday = dateStringCreator(shipDate.getDay());
             var month = monthStringCreator(shipDate.getMonth());
-
-            output.innerHTML = 'Your lessons will be graded around:<br><strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + shipDate.getDate() + ', ' + shipDate.getFullYear() + '</strong>.<br> You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
+            
+            output.innerHTML = 'Your lessons will be graded around: <strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + shipDate.getDate() + ', ' + shipDate.getFullYear() + '</strong>. You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
+            document.getElementById('recTimeOutput').className = 'recTimeOutput fade';
         }
 
         else if (shipDate.getDay() === 0) {
@@ -89,31 +99,34 @@ function courseScript() {
             var weekday = dateStringCreator(shipDate.getDay());
             var month = monthStringCreator(shipDate.getMonth());
 
-            output.innerHTML = 'Your lessons will be graded around:<br><strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + shipDate.getDate() + ', ' + shipDate.getFullYear() + '</strong>.<br> You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
+            output.innerHTML = 'Your lessons will be graded around:<strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + shipDate.getDate() + ', ' + shipDate.getFullYear() + '</strong>. You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
+            document.getElementById('recTimeOutput').className = 'recTimeOutput fade';
         }
 
         else {
             var weekday = dateStringCreator(shipDate.getDay());
             var month = monthStringCreator(shipDate.getMonth());
 
-            output.innerHTML = 'Your lessons will be graded around:<br><strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + shipDate.getDate() + ', ' + shipDate.getFullYear() + '</strong>.<br> You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
+            output.innerHTML = 'Your lessons will be graded around:<strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + shipDate.getDate() + ', ' + shipDate.getFullYear() + '</strong>. You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
+            document.getElementById('recTimeOutput').className = 'recTimeOutput fade';
         }
     }
 
     else if (submissionType.value === 'l') {
         shipDate === shipDate.setDate(shipDate.getDate()+1);
         output.innerHTML = 'Your online submission should be uploaded and recorded. You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
+        document.getElementById('recTimeOutput').className = 'recTimeOutput fade';
     }
 
     else if (submissionType.value === 'f') {
-        shipDate === shipDate.setDate(shipDate.getDate()+14+1);
+        shipDate === shipDate.setDate(shipDate.getDate()+shipMethodNumber+1);
 
         if (shipDate.getDay() === 6) {
             shipDate === shipDate.setDate(shipDate.getDate()+2);
             var weekday = dateStringCreator(shipDate.getDay());
             var month = monthStringCreator(shipDate.getMonth());
 
-            output.innerHTML = 'Your final will be graded around:<br><strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + shipDate.getDate() + ', ' + shipDate.getFullYear() + '</strong>.<br> You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
+            output.innerHTML = 'Your final will be graded around:<strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + shipDate.getDate() + ', ' + shipDate.getFullYear() + '</strong>. You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
         }
 
         else if (shipDate.getDay() === 0) {
@@ -121,14 +134,16 @@ function courseScript() {
             var weekday = dateStringCreator(shipDate.getDay());
             var month = monthStringCreator(shipDate.getMonth());
 
-            output.innerHTML = 'Your final will be graded around:<br><strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + shipDate.getDate() + ', ' + shipDate.getFullYear() + '</strong>.<br> You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
+            output.innerHTML = 'Your final will be graded around:<strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + shipDate.getDate() + ', ' + shipDate.getFullYear() + '</strong>. You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
+            document.getElementById('recTimeOutput').className = 'recTimeOutput fade';
         }
 
         else {
             var weekday = dateStringCreator(shipDate.getDay());
             var month = monthStringCreator(shipDate.getMonth());
 
-            output.innerHTML = 'Your final will be graded around:<br><strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + shipDate.getDate() + ', ' + shipDate.getFullYear() + '</strong>.<br> You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
+            output.innerHTML = 'Your final will be graded around:<strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + shipDate.getDate() + ', ' + shipDate.getFullYear() + '</strong>. You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
+            document.getElementById('recTimeOutput').className = 'recTimeOutput fade';
         }
     }  
 }

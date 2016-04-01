@@ -10557,3 +10557,118 @@ table, thead, tfoot {
   margin: 0;
   width: 100%;
 }
+
+@-moz-keyframes fade {
+  /* line 250, ../scss/_style.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 253, ../scss/_style.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade {
+  /* line 259, ../scss/_style.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 262, ../scss/_style.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fade {
+  /* line 268, ../scss/_style.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 271, ../scss/_style.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  /* line 277, ../scss/_style.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 280, ../scss/_style.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes notFade {
+  /* line 286, ../scss/_style.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 289, ../scss/_style.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes notFade {
+  /* line 295, ../scss/_style.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 298, ../scss/_style.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes notFade {
+  /* line 304, ../scss/_style.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 307, ../scss/_style.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes notFade {
+  /* line 313, ../scss/_style.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 316, ../scss/_style.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+/* line 324, ../scss/_style.scss */
+.lesson-schedule .fade {
+  animation: fade 200ms;
+  -moz-animation: fade 200ms;
+  -webkit-animation: fade 200ms;
+  -ms-animation: fade 200ms;
+}
+/* line 332, ../scss/_style.scss */
+.lesson-schedule .not-fade {
+  animation: notFade 200ms;
+  -moz-animation: notFade 200ms;
+  -webkit-animation: notFade 200ms;
+  -ms-animation: notFade 200ms;
+}
+/* line 340, ../scss/_style.scss */
+.lesson-schedule .not-fade {
+  opacity: 0;
+}

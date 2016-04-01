@@ -245,3 +245,100 @@ table, thead, tfoot
 		width: 100%;
 	}
 }
+
+@-moz-keyframes fade {
+	  0% {
+	    opacity: 0;
+	  }
+	  100% {
+	    opacity: 1;
+	  }
+	}
+
+@-webkit-keyframes fade {
+	  0% {
+	    opacity: 0;
+	  }
+	  100% {
+	    opacity: 1;
+	  }
+	}
+
+@-ms-keyframes fade {
+	  0% {
+	    opacity: 0;
+	  }
+	  100% {
+	    opacity: 1;
+	  }
+	}
+
+@keyframes fade {
+	  0% {
+	    opacity: 0;
+	  }
+	  100% {
+	    opacity: 1;
+	  }
+	}
+
+@-moz-keyframes notFade {
+	  0% {
+	    opacity: 1;
+	  }
+	  100% {
+	    opacity: 0;
+	  }
+	}
+
+@-webkit-keyframes notFade {
+	  0% {
+	    opacity: 1;
+	  }
+	  100% {
+	    opacity: 0;
+	  }
+	}
+
+@-ms-keyframes notFade {
+	  0% {
+	    opacity: 1;
+	  }
+	  100% {
+	    opacity: 0;
+	  }
+	}
+
+@keyframes notFade {
+	  0% {
+	    opacity: 1;
+	  }
+	  100% {
+	    opacity: 0;
+	  }
+	}
+
+.lesson-schedule
+{
+	.fade
+	{
+	  animation: fade 200ms;
+	  -moz-animation: fade 200ms;
+	  -webkit-animation: fade 200ms;
+	  -ms-animation: fade 200ms;
+	}
+
+	.not-fade
+	{
+	  animation: notFade 200ms;
+	  -moz-animation: notFade 200ms;
+	  -webkit-animation: notFade 200ms;
+	  -ms-animation: notFade 200ms;
+	}
+
+	.not-fade
+	{
+		opacity: 0;
+	}
+
+}

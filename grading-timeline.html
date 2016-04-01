@@ -9,6 +9,14 @@
     <script src="js/lesson-schedule.js"></script>
 
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <style type="text/css">
+      option
+      {
+        padding: .25em;
+      }
+    </style>
+
   </head>
   <body>
 
@@ -132,8 +140,20 @@
               </select>
             </div>
 
+
+            <div class="small-12 medium-12 columns">
+              <label>Shipping Method</label>
+              <select name="method" id="method" size="1" onchange="valad()">
+                <option value="dis" disabled selected hidden>Choose Shipping Method</option>
+                <option value="14">Regular/Ground</option>
+                <option value="3">Two Day</option>
+                <option value="2">Next Day</option>
+              </select>
+            </div>
+
+
             <div class="small-12 columns">
-              <button id="submitButton" onclick="badClick()"  type="button" class="expand">COMPLEATE ALL FIELDS</button>
+              <button id="submitButton" onclick="badClick()" type="button" class="expand">COMPLEATE ALL FIELDS</button>
             </div>
 
           </form>
