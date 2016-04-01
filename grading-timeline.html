@@ -144,10 +144,11 @@
             <div class="small-12 medium-12 columns">
               <label>Shipping Method</label>
               <select name="method" id="method" size="1" onchange="valad()">
-                <option value="dis" disabled selected hidden>Choose Shipping Method</option>
-                <option value="14">Regular/Ground</option>
-                <option value="3">Two Day</option>
-                <option value="2">Next Day</option>
+                <option id="initShipMethod" value="dis" disabled selected hidden>Choose Shipping Method</option>
+                <option id="regGround" value="14">Regular/Ground</option>
+                <option id="twoDay" value="3">Two Day</option>
+                <option id="nextDay" value="2">Next Day</option>
+                <option id="onlineSubmission" value="na">Online Submission</option>
               </select>
             </div>
 

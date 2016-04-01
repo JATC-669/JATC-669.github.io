@@ -8,15 +8,64 @@ function valad() {
     var shipMethod = document.getElementById('method').value;
     document.getElementById('recTimeOutput').className = 'recTimeOutput not-fade';
 
-    if (courseNumber === 'dis' || submissionType === 'dis' || shipMonth === 'dis' || shipDay === 'dis' || shipYear === 'dis' || shipMethod === 'dis') {
-    
+    var initShipMethod = document.getElementById('initShipMethod');
+    var regGround = document.getElementById('regGround');
+    var twoDay = document.getElementById('twoDay');
+    var nextDay = document.getElementById('nextDay');
+    var onlineSubmission = document.getElementById('onlineSubmission');
+
+    if (courseNumber === 'dis' || submissionType === 'dis' || shipMonth === 'dis' || shipDay === 'dis' || shipYear === 'dis' || shipMethod === 'dis')
+    {     
+
+        if ((submissionType === 'l' || submissionType === 'f') && (courseNumber === '04' || courseNumber === '07' || courseNumber === '19')) {
+            
+            initShipMethod.disabled = true;
+            onlineSubmission.disabled = true;
+            
+            twoDay.disabled = false;
+            nextDay.disabled = false;
+            regGround.disabled = false;
+
+            regGround.selected = true;
+            onlineSubmission.selected = false;
+            alert('handgraded')
+        }
+
+        else if ((submissionType === 'f') && (courseNumber != '04' || courseNumber != '07' || courseNumber != '19')) {
+            
+            initShipMethod.disabled = true;
+            onlineSubmission.disabled = true;
+            
+            twoDay.disabled = false;
+            nextDay.disabled = false;
+            regGround.disabled = false;
+
+            regGround.selected = true;
+            onlineSubmission.selected = false;
+
+            alert('Final')
+        }
+
+        else if ((submissionType === 'l') && (courseNumber != '04' || courseNumber != '07' || courseNumber != '19')) {
+            
+            initShipMethod.disabled = true;
+            
+            twoDay.disabled = true;
+            nextDay.disabled = true;
+            regGround.disabled = true;
+
+            onlineSubmission.selected = true;
+            alert('Leson')
+        }
     }
 
-    else {
+    else
+    {
         document.getElementById('submitButton').className = 'expand';
         document.getElementById('submitButton').innerHTML = 'SUBMIT';
 
-    }
+    };
+
 };
 
 function badClick() {
@@ -27,7 +76,7 @@ function badClick() {
     var shipYear = document.getElementById('year').value;
     var shipMethod = document.getElementById('method').value;
 
-    if (courseNumber === 'dis' || submissionType === 'dis' || shipMonth === 'dis' || shipDay === 'dis' || shipYear === 'dis' || shipMethod === 'dis') {
+    if (courseNumber === 'dis' || submissionType === 'dis' || shipMonth === 'dis' || shipDay === 'dis' || shipYear === 'dis' || shipMethod === 'dis'){
 
         document.getElementById('submitButton').innerHTML = 'YOU HAVE UNSELECTED FIELDS';
     }
