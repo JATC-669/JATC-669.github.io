@@ -1,286 +1,134 @@
-function courseScript ()
-{
-    var courseNumber = document.getElementById('course');
-    var submissionType = document.getElementById('type');
+
+function valad() {
+    var courseNumber = document.getElementById('course').value;
+    var submissionType = document.getElementById('type').value;
+    var shipMonth = document.getElementById('month').value;
+    var shipDay = document.getElementById('day').value;
+    var shipYear = document.getElementById('year').value;
+
+    if (courseNumber === 'dis' || submissionType === 'dis' || shipMonth === 'dis' || shipDay === 'dis' || shipYear === 'dis') {
+    }
+
+    else {
+        document.getElementById('submitButton').className = 'expand';
+        document.getElementById('submitButton').innerHTML = 'SUBMIT';
+    }
+};
+
+function badClick() {
+    var courseNumber = document.getElementById('course').value;
+    var submissionType = document.getElementById('type').value;
+    var shipMonth = document.getElementById('month').value;
+    var shipDay = document.getElementById('day').value;
+    var shipYear = document.getElementById('year').value;
+
+    if (courseNumber === 'dis' || submissionType === 'dis' || shipMonth === 'dis' || shipDay === 'dis' || shipYear === 'dis') {
+
+        document.getElementById('submitButton').innerHTML = 'YOU HAVE UNSELECTED FIELDS';
+    }
+
+    else {
+        courseScript();
+    }
+}
+
+function courseScript() {
+    var courseNumber = document.getElementById('course').value;
     var submissionType = document.getElementById('type');
     var shipMonth = document.getElementById('month');
     var shipDay = document.getElementById('day');
     var shipYear = document.getElementById('year');
+    var output = document.getElementById('recTimeOutput');
+    
+    var shipDate = new Date(shipYear.value, shipMonth.value, shipDay.value)
 
-    var newDate = new Date(shipYear.value, shipMonth.value - 1, shipDay.value);
+    function dateStringCreator(day) {
+        var weekday = new Array(7);
+            weekday[0]=  "Sunday";
+            weekday[1] = "Monday";
+            weekday[2] = "Tuesday";
+            weekday[3] = "Wednesday";
+            weekday[4] = "Thursday";
+            weekday[5] = "Friday";
+            weekday[6] = "Saturday";
 
-    var arrayish = [newDate, newDate]
+            return weekday[day];
+    }
 
-    alert(arrayish )
+    function monthStringCreator(month) {
+        var theMonth = new Array(12);
+            theMonth[00]=  "Jan";
+            theMonth[01]=  "Feb";
+            theMonth[02]=  "Mar";
+            theMonth[03]=  "Apr";
+            theMonth[04]=  "May";
+            theMonth[05]=  "Jun";
+            theMonth[06]=  "Jul";
+            theMonth[07]=  "Aug";
+            theMonth[08]=  "Sept";
+            theMonth[09]=  "Oct";
+            theMonth[10]=  "Nov";
+            theMonth[11]=  "Dec";
 
+            return theMonth[month];
+    }
+
+    if (courseNumber === '04' || courseNumber === '07' || courseNumber === '19') {
+        shipDate === shipDate.setDate(shipDate.getDate()+14+5);
+
+        if (shipDate.getDay() === 6) {
+            shipDate === shipDate.setDate(shipDate.getDate()+2);
+            var weekday = dateStringCreator(shipDate.getDay());
+            var month = monthStringCreator(shipDate.getMonth());
+
+            output.innerHTML = 'Your lessons will be graded around:<br><strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + shipDate.getDate() + ', ' + shipDate.getFullYear() + '</strong>.<br> You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
+        }
+
+        else if (shipDate.getDay() === 0) {
+            shipDate === shipDate.setDate(shipDate.getDate()+1);
+            var weekday = dateStringCreator(shipDate.getDay());
+            var month = monthStringCreator(shipDate.getMonth());
+
+            output.innerHTML = 'Your lessons will be graded around:<br><strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + shipDate.getDate() + ', ' + shipDate.getFullYear() + '</strong>.<br> You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
+        }
+
+        else {
+            var weekday = dateStringCreator(shipDate.getDay());
+            var month = monthStringCreator(shipDate.getMonth());
+
+            output.innerHTML = 'Your lessons will be graded around:<br><strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + shipDate.getDate() + ', ' + shipDate.getFullYear() + '</strong>.<br> You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
+        }
+    }
+
+    else if (submissionType.value === 'l') {
+        shipDate === shipDate.setDate(shipDate.getDate()+1);
+        output.innerHTML = 'Your online submission should be uploaded and recorded. You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
+    }
+
+    else if (submissionType.value === 'f') {
+        shipDate === shipDate.setDate(shipDate.getDate()+14+1);
+
+        if (shipDate.getDay() === 6) {
+            shipDate === shipDate.setDate(shipDate.getDate()+2);
+            var weekday = dateStringCreator(shipDate.getDay());
+            var month = monthStringCreator(shipDate.getMonth());
+
+            output.innerHTML = 'Your final will be graded around:<br><strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + shipDate.getDate() + ', ' + shipDate.getFullYear() + '</strong>.<br> You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
+        }
+
+        else if (shipDate.getDay() === 0) {
+            shipDate === shipDate.setDate(shipDate.getDate()+1);
+            var weekday = dateStringCreator(shipDate.getDay());
+            var month = monthStringCreator(shipDate.getMonth());
+
+            output.innerHTML = 'Your final will be graded around:<br><strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + shipDate.getDate() + ', ' + shipDate.getFullYear() + '</strong>.<br> You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
+        }
+
+        else {
+            var weekday = dateStringCreator(shipDate.getDay());
+            var month = monthStringCreator(shipDate.getMonth());
+
+            output.innerHTML = 'Your final will be graded around:<br><strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + shipDate.getDate() + ', ' + shipDate.getFullYear() + '</strong>.<br> You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
+        }
+    }  
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-function courseScript() {
-	
-	 Lesson or Final 
-	var courseSelection = document.getElementById('course');
-	var course = courseSelection.value;
-
-	var lessonSub = document.getElementById('lessonSub');
-	var finalSub = document.getElementById('finalSub');
-
-
-	switch (courseSelection.value) {
-    case '01':
-        lessonSub.disabled=true;
-        lessonSub.setAttribute('disabled', 'disabled');
-        finalSub.selected=true;
-        break;
-    case '02':
-        lessonSub.disabled=true;
-        lessonSub.setAttribute('disabled', 'disabled');
-        finalSub.selected=true;
-        break;
-    case '03':
-        lessonSub.disabled=true;
-        lessonSub.setAttribute('disabled', 'disabled');
-        finalSub.selected=true;
-        break;
-    case '04':
-        lessonSub.removeAttribute('disabled');
-        break;
-    case '05':
-        lessonSub.disabled=true;
-        lessonSub.setAttribute('disabled', 'disabled');
-        finalSub.selected=true;
-        break;
-    case '06':
-        lessonSub.disabled=true;
-        lessonSub.setAttribute('disabled', 'disabled');
-        finalSub.selected=true;
-        break;
-    case '07':
-        lessonSub.removeAttribute('disabled');
-        break;
-    case '08':
-        lessonSub.disabled=true;
-        lessonSub.setAttribute('disabled', 'disabled');
-        finalSub.selected=true;
-        break;
-    case '09':
-        lessonSub.disabled=true;
-        lessonSub.setAttribute('disabled', 'disabled');
-        finalSub.selected=true;
-        break;
-    case '10':
-        lessonSub.removeAttribute('disabled');
-        break;
-    case '11':
-        lessonSub.disabled=true;
-        lessonSub.setAttribute('disabled', 'disabled');
-        finalSub.selected=true;
-        break;
-    case '12':
-        lessonSub.disabled=true;
-        lessonSub.setAttribute('disabled', 'disabled');
-        finalSub.selected=true;
-        break;
-    case '13':
-        lessonSub.disabled=true;
-        lessonSub.setAttribute('disabled', 'disabled');
-        finalSub.selected=true;
-        break;
-    case '14':
-        lessonSub.disabled=true;
-        lessonSub.setAttribute('disabled', 'disabled');
-        finalSub.selected=true;
-        break;
-    case '15':
-        lessonSub.disabled=true;
-        lessonSub.setAttribute('disabled', 'disabled');
-        finalSub.selected=true;
-        break;
-    case '16':
-        lessonSub.disabled=true;
-        lessonSub.setAttribute('disabled', 'disabled');
-        finalSub.selected=true;
-        break;
-    case '17':
-        lessonSub.disabled=true;
-        lessonSub.setAttribute('disabled', 'disabled');
-        finalSub.selected=true;
-        break;
-    case '18':
-        lessonSub.disabled=true;
-        lessonSub.setAttribute('disabled', 'disabled');
-        finalSub.selected=true;
-        break;
-    case '19':
-        lessonSub.removeAttribute('disabled');
-        break;
-	}
-
-	
-
-	/* DATES Entry
-	var monthField = document.getElementById('month')
-	var month = monthField.value;
-
-	var twentyeight = document.getElementById('twentyeight')
-	var twentynine = document.getElementById('twentynine');
-	var thirty = document.getElementById('thirty');
-	var thirtyone = document.getElementById('thirtyone');
-
-	switch (monthField.value) {
-
-	// Jan 31
-    case '01':
-    	twentynine.removeAttribute('disabled');
-    	twentynine.setAttribute('style', 'visibility: visible;');
-    	thirty.removeAttribute('disabled');
-    	thirty.setAttribute('style', 'visibility: visible;');
-    	thirtyone.removeAttribute('disabled');
-    	thirtyone.setAttribute('style', 'visibility: visible;');
-        break;
-
-    // Feb 28
-    case '02':
-    	twentyeight.setAttribute('selected', 'selected')
-    	twentynine.disabled=true;
-        twentynine.setAttribute('disabled', 'disabled');
-        twentynine.setAttribute('style', 'visibility: hidden;');
-        thirty.disabled=true;
-        thirty.setAttribute('disabled', 'disabled');
-        thirty.setAttribute('style', 'visibility: hidden;');
-        thirtyone.disabled=true;
-        thirtyone.setAttribute('disabled', 'disabled');
-        thirtyone.setAttribute('style', 'visibility: hidden;');
-        break;
-
-    // March 31
-    case '03':
-    	twentynine.removeAttribute('disabled');
-    	twentynine.setAttribute('style', 'visibility: visible;');
-    	thirty.removeAttribute('disabled');
-    	thirty.setAttribute('style', 'visibility: visible;');
-    	thirtyone.removeAttribute('disabled');
-    	thirtyone.setAttribute('style', 'visibility: visible;');
-        break;
-
-    // April 30
-    case '04':
-    	thirtyone.removeAttribute('disabled');
-    	thirtyone.setAttribute('style', 'visibility: hidden;');
-        break;
-
-    // May 31
-    case '05':
-    	twentynine.removeAttribute('disabled');
-    	twentynine.setAttribute('style', 'visibility: visible;');
-    	thirty.removeAttribute('disabled');
-    	thirty.setAttribute('style', 'visibility: visible;');
-    	thirtyone.removeAttribute('disabled');
-    	thirtyone.setAttribute('style', 'visibility: visible;');
-        break;
-    
-    // June 30
-    case '06':
-    	thirtyone.removeAttribute('disabled');
-    	thirtyone.setAttribute('style', 'visibility: hidden;');
-        break;
-
-    // July 31
-    case '07':
-    	twentynine.removeAttribute('disabled');
-    	twentynine.setAttribute('style', 'visibility: visible;');
-    	thirty.removeAttribute('disabled');
-    	thirty.setAttribute('style', 'visibility: visible;');
-    	thirtyone.removeAttribute('disabled');
-    	thirtyone.setAttribute('style', 'visibility: visible;');
-        break;
-    
-    // Aug 31
-    case '08':
-    	twentynine.removeAttribute('disabled');
-    	twentynine.setAttribute('style', 'visibility: visible;');
-    	thirty.removeAttribute('disabled');
-    	thirty.setAttribute('style', 'visibility: visible;');
-    	thirtyone.removeAttribute('disabled');
-    	thirtyone.setAttribute('style', 'visibility: visible;');
-        break;
-
-    // Sept 30
-    case '09':
-    	thirtyone.removeAttribute('disabled');
-    	thirtyone.setAttribute('style', 'visibility: hidden;');
-        break;
-    
-    // Oct 31
-    case '10':
-    	twentynine.removeAttribute('disabled');
-    	twentynine.setAttribute('style', 'visibility: visible;');
-    	thirty.removeAttribute('disabled');
-    	thirty.setAttribute('style', 'visibility: visible;');
-    	thirtyone.removeAttribute('disabled');
-    	thirtyone.setAttribute('style', 'visibility: visible;');
-        break;
-
-    // Nov 30
-    case '11':
-    	thirtyone.removeAttribute('disabled');
-    	thirtyone.setAttribute('style', 'visibility: hidden;');
-        break;
-    
-    // Dec 31
-    case '12':
-    	twentynine.removeAttribute('disabled');
-    	twentynine.setAttribute('style', 'visibility: visible;');
-    	thirty.removeAttribute('disabled');
-    	thirty.setAttribute('style', 'visibility: visible;');
-    	thirtyone.removeAttribute('disabled');
-    	thirtyone.setAttribute('style', 'visibility: visible;');
-        break;
-	}
-	
-}
-
-function findDates() {
-	var dStart = new Date();
-    
-
-	var enteredShipMonth = document.getElementById('month');
-	var enteredShipDate = document.getElementById('day');
-	var enteredShipFullYear = document.getElementById('year');
-
-    dStart.setMonth(enteredShipMonth.value - 1)
-    dStart.setDate(15);
-    alert(dStart)
-}
-
-*/
