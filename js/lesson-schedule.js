@@ -28,7 +28,7 @@ function valad() {
 
             regGround.selected = true;
             onlineSubmission.selected = false;
-            alert('handgraded')
+
         }
 
         else if ((submissionType === 'f') && (courseNumber != '04' || courseNumber != '07' || courseNumber != '19')) {
@@ -43,7 +43,6 @@ function valad() {
             regGround.selected = true;
             onlineSubmission.selected = false;
 
-            alert('Final')
         }
 
         else if ((submissionType === 'l') && (courseNumber != '04' || courseNumber != '07' || courseNumber != '19')) {
