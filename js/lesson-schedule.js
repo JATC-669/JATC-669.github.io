@@ -152,7 +152,7 @@ function courseScript() {
 
             weekday = dateStringCreator(processDate.getDay());
             month = monthStringCreator(processDate.getMonth());
-            output.innerHTML = 'Your final will be graded around:<strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + processDate.getDate() + ', ' + processDate.getFullYear() + '</strong>. You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
+            output.innerHTML = 'Your handgraded submission will be graded around:<strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + processDate.getDate() + ', ' + processDate.getFullYear() + '</strong>. You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
             document.getElementById('recTimeOutput').className = 'recTimeOutputShown fade';
         }
 
@@ -162,7 +162,7 @@ function courseScript() {
 
             weekday = dateStringCreator(processDate.getDay());
             month = monthStringCreator(processDate.getMonth());
-            output.innerHTML = 'Your final will be graded around:<strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + processDate.getDate() + ', ' + processDate.getFullYear() + '</strong>. You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
+            output.innerHTML = 'Your handgraded submission will be graded around:<strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + processDate.getDate() + ', ' + processDate.getFullYear() + '</strong>. You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
             document.getElementById('recTimeOutput').className = 'recTimeOutputShown fade';
         }
 
@@ -170,7 +170,7 @@ function courseScript() {
         else {
             weekday = dateStringCreator(processDate.getDay());
             month = monthStringCreator(processDate.getMonth());
-            output.innerHTML = 'Your final will be graded around:<strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + processDate.getDate() + ', ' + processDate.getFullYear() + '</strong>. You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
+            output.innerHTML = 'Your handgraded submission will be graded around:<strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + processDate.getDate() + ', ' + processDate.getFullYear() + '</strong>. You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
             document.getElementById('recTimeOutput').className = 'recTimeOutputShown fade';
         }
     }
