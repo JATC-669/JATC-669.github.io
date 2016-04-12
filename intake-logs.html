@@ -10,7 +10,7 @@
 
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
   </head>
-  <body onload="getDate()">
+  <body onload="load()">
   
     <header>
       <div class="row">
@@ -20,10 +20,79 @@
         </div>
       </div>
     </header>
-    
+
+    <main>
+      <form>
+        <div class="row">
+          <label for="backDate" class="medium-3 columns">Date
+            <input type="date" name="backDate" id="backDate">
+          </label>
+        </div>
+        <div class="row">
+          <label for="studentId" class="medium-4 columns">Student ID
+            <input type="text" name="studentId" value="@00">
+          </label>
+          <label for="lastName" class="medium-4 columns">Last Name
+            <input type="text" name="lastName" placeholder="L. Name">
+          </label>
+          <label for="firstName" class="medium-4 columns">First Name
+            <input type="text" name="firstName" placeholder="F. Name">
+          </label>
+          <label for="courseNumber" class="medium-4 columns">Course
+            <input type="text" name="courseNumber" placeholder="04">
+          </label>
+          <label for="lessons" class="medium-4 columns">Lessons/Final
+            <select name="courseNumber">
+              <option>Lessons</option>
+              <option>Final</option>
+            </select>
+          </label>
+          <label for="courseNumber" class="medium-4 columns">Lesson
+            <input type="text" name="courseNumber">
+          </label>
+        </div>
+      </form>
+
+      <div class="row">
+        <div class="medium-12 columns">
+            <button class="expand" type="button" onclick="populateTable()">SUBMIT</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-12 columns">
+          <table width="100%">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Student ID</th>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>Course</th>
+                <th>Lessons/Final</th>
+                <th>Lessons/Final</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Date</td>
+                <td>Date</td>
+                <td>Date</td>
+                <td>Date</td>
+                <td>Date</td>
+                <td>Date</td>
+                <td>Date</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+    </main>
+
+<!--
     <main>
       <div class="row">
-        <!-- Online Resources -->
         <div class="small-12 columns">
           <h2>Intake Logs</h2>
         </div>
@@ -45,7 +114,6 @@
 
               <tr class="new-intake">
                 <td>
-                  <!-- DATE -->
                   <input id="dateField" type="date">
                 </td>
                 <td>
@@ -54,17 +122,14 @@
                       <span class="prefix">@00</span>
                     </div>
                     <div class="small-8 columns">
-                      <!-- Student ID Numbner -->
                       <input id="studentId" type="text" autofocus = "autofocus">
                     </div>  
                   </div>
                 </td>
                 <td>
-                  <!-- LAST NAME -->
                   <input id="lastName" type="text">
                 </td>
                 <td>
-                  <!-- FIRST NAME -->
                   <input id="firstName" type="text">
                 </td>
                 <td>
@@ -73,17 +138,14 @@
                       <span class="prefix">SPF</span>
                     </div>
                     <div class="small-6 columns">
-                      <!-- COURSE NUMBER -->
                       <input id="course" type="text">
                     </div>
                   </div>
                 </td>
                 <td>
-                  <!-- LESSONS -->
                   <input id="lessons" type="text">
                 </td>
                 <td class="text-center">
-                  <!-- FINAL INDICATOR -->
                   <input id="finalIndicator" type="text">
                 </td>
                 <td colspan="3">
@@ -93,19 +155,7 @@
 
             </thead>
             <tbody id="intakeLog">
-              <!--
-              <tr>
-                
-                <td id="loggedDate"></td>
-                <td id="loggedStudentId"></td>
-                <td id="loggedLastName"></td>
-                <td id="loggedFirstName"></td>
-                <td id="loggedCourse"></td>
-                <td id="loggedLessons"></td>
-                <td id="loggedfinalIndicator"></td>
-              
-              </tr>
-              -->
+
             </tbody>
             <tfoot>
               <tr>
@@ -117,12 +167,10 @@
             </tfoot>
           </table>
 
-          <!-- Total Tables -->
-
         </div>
       </div>
     </main>
-
+-->
     <footer>
     </footer>
 

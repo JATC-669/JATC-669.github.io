@@ -322,23 +322,35 @@ table, thead, tfoot
 {
 	.fade
 	{
-	  animation: fade 200ms;
-	  -moz-animation: fade 200ms;
-	  -webkit-animation: fade 200ms;
-	  -ms-animation: fade 200ms;
+	  animation: fade 800ms;
+	  -moz-animation: fade 800ms;
+	  -webkit-animation: fade 800ms;
+	  -ms-animation: fade 800ms;
 	}
 
 	.not-fade
 	{
-	  animation: notFade 200ms;
-	  -moz-animation: notFade 200ms;
-	  -webkit-animation: notFade 200ms;
-	  -ms-animation: notFade 200ms;
+	  animation: notFade 800ms;
+	  -moz-animation: notFade 800ms;
+	  -webkit-animation: notFade 800ms;
+	  -ms-animation: notFade 800ms;
 	}
 
 	.not-fade
 	{
 		opacity: 0;
+		height: 0;
 	}
 
+	.recTimeOutput
+	{
+		display: none;
+	}
+
+	.recTimeOutputShown
+	{
+		display: block;
+		margin-bottom: 1em;
+		color: $white;
+	}
 }

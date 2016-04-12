@@ -74,7 +74,7 @@
             </select>
 
             <div class="row">
-              <div class="small-12 medium-4 columns">
+              <div class="small-6 medium-4 columns">
                 <label>Month Mailed/Submitted</label>
                 <select name="month" id="month" onchange="valad()">
                   <option value="dis" disabled selected hidden>Choose Month</option>
@@ -93,7 +93,7 @@
               </select>
             </div>
 
-            <div class="small-12 medium-4 columns">
+            <div class="small-6 medium-4 columns">
               <label>Day Mailed/Submitted</label>
               <select name="day" id="day" size="1" onchange="valad()">
                 <option value="dis" disabled selected hidden>Choose Day</option>
@@ -146,21 +146,21 @@
               <select name="method" id="method" size="1" onchange="valad()">
                 <option id="initShipMethod" value="dis" disabled selected hidden>Choose Shipping Method</option>
                 <option id="regGround" value="14">Regular/Ground</option>
-                <option id="twoDay" value="3">Two Day</option>
-                <option id="nextDay" value="2">Next Day</option>
+                <option id="twoDay" value="2">Two Day</option>
+                <option id="nextDay" value="1">Next Day</option>
                 <option id="onlineSubmission" value="na">Online Submission</option>
               </select>
             </div>
-
+            <div class="small-12 columns">
+              <span id="recTimeOutput" class="recTimeOutput"></span>
+            </div>
 
             <div class="small-12 columns">
               <button id="submitButton" onclick="badClick()" type="button" class="expand">COMPLEATE ALL FIELDS</button>
             </div>
 
           </form>
-          <div class="small-12 columns end">
-            <span id="recTimeOutput" class="recTimeOutput"></span>
-          </div>
+          
         </div>
       </div>
 

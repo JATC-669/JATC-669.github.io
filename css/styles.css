@@ -10656,19 +10656,30 @@ table, thead, tfoot {
 
 /* line 324, ../scss/_style.scss */
 .lesson-schedule .fade {
-  animation: fade 200ms;
-  -moz-animation: fade 200ms;
-  -webkit-animation: fade 200ms;
-  -ms-animation: fade 200ms;
+  animation: fade 800ms;
+  -moz-animation: fade 800ms;
+  -webkit-animation: fade 800ms;
+  -ms-animation: fade 800ms;
 }
 /* line 332, ../scss/_style.scss */
 .lesson-schedule .not-fade {
-  animation: notFade 200ms;
-  -moz-animation: notFade 200ms;
-  -webkit-animation: notFade 200ms;
-  -ms-animation: notFade 200ms;
+  animation: notFade 800ms;
+  -moz-animation: notFade 800ms;
+  -webkit-animation: notFade 800ms;
+  -ms-animation: notFade 800ms;
 }
 /* line 340, ../scss/_style.scss */
 .lesson-schedule .not-fade {
   opacity: 0;
+  height: 0;
+}
+/* line 346, ../scss/_style.scss */
+.lesson-schedule .recTimeOutput {
+  display: none;
+}
+/* line 351, ../scss/_style.scss */
+.lesson-schedule .recTimeOutputShown {
+  display: block;
+  margin-bottom: 1em;
+  color: white;
 }
