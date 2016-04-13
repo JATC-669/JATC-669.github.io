@@ -152,7 +152,7 @@ function courseScript() {
 
             weekday = dateStringCreator(processDate.getDay());
             month = monthStringCreator(processDate.getMonth());
-            output.innerHTML = 'Your handgraded submission will be graded around:<strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + processDate.getDate() + ', ' + processDate.getFullYear() + '</strong>. You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
+            output.innerHTML = 'Your handgraded submission will be graded around:<strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + processDate.getDate() + ', ' + processDate.getFullYear() + '</strong>. You can check your status on the <a href="https://jatc669.wccnet.edu/">Testing Website</a>.';
             document.getElementById('recTimeOutput').className = 'recTimeOutputShown fade';
         }
 
@@ -162,7 +162,7 @@ function courseScript() {
 
             weekday = dateStringCreator(processDate.getDay());
             month = monthStringCreator(processDate.getMonth());
-            output.innerHTML = 'Your handgraded submission will be graded around:<strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + processDate.getDate() + ', ' + processDate.getFullYear() + '</strong>. You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
+            output.innerHTML = 'Your handgraded submission will be graded around:<strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + processDate.getDate() + ', ' + processDate.getFullYear() + '</strong>. You can check your status on the <a href="https://jatc669.wccnet.edu/">Testing Website</a>.';
             document.getElementById('recTimeOutput').className = 'recTimeOutputShown fade';
         }
 
@@ -170,7 +170,7 @@ function courseScript() {
         else {
             weekday = dateStringCreator(processDate.getDay());
             month = monthStringCreator(processDate.getMonth());
-            output.innerHTML = 'Your handgraded submission will be graded around:<strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + processDate.getDate() + ', ' + processDate.getFullYear() + '</strong>. You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
+            output.innerHTML = 'Your handgraded submission will be graded around:<strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + processDate.getDate() + ', ' + processDate.getFullYear() + '</strong>. You can check your status on the <a href="https://jatc669.wccnet.edu/">Testing Website</a>.';
             document.getElementById('recTimeOutput').className = 'recTimeOutputShown fade';
         }
     }
@@ -178,7 +178,7 @@ function courseScript() {
     // If the submission is an online lesson
     else if (submissionType.value === 'l') {
         shipDate = shipDate.setDate(shipDate.getDate());
-        output.innerHTML = 'Your online submission should be uploaded and recorded. You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
+        output.innerHTML = 'Your online submission should be uploaded and recorded. You can check your status on the <a href="https://jatc669.wccnet.edu/">Testing Website</a>.';
         document.getElementById('recTimeOutput').className = 'recTimeOutputShown fade';
     }
 
@@ -190,7 +190,7 @@ function courseScript() {
             processDate.setDate(processDate.getDate()+2);
             weekday = dateStringCreator(processDate.getDay());
             month = monthStringCreator(processDate.getMonth());
-            output.innerHTML = 'Your final will be graded around:<strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + processDate.getDate() + ', ' + processDate.getFullYear() + '</strong>. You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
+            output.innerHTML = 'Your final will be graded around:<strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + processDate.getDate() + ', ' + processDate.getFullYear() + '</strong>. You can check your status on the <a href="https://jatc669.wccnet.edu/">Testing Website</a>.';
             document.getElementById('recTimeOutput').className = 'recTimeOutputShown fade';  
         }
 
@@ -199,7 +199,7 @@ function courseScript() {
             processDate.setDate(processDate.getDate()+1);
             weekday = dateStringCreator(processDate.getDay());
             month = monthStringCreator(processDate.getMonth());
-            output.innerHTML = 'Your final will be graded around:<strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + processDate.getDate() + ', ' + processDate.getFullYear() + '</strong>. You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
+            output.innerHTML = 'Your final will be graded around:<strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + processDate.getDate() + ', ' + processDate.getFullYear() + '</strong>. You can check your status on the <a href="https://jatc669.wccnet.edu/">Testing Website</a>.';
             document.getElementById('recTimeOutput').className = 'recTimeOutputShown fade';
         }
 
@@ -207,7 +207,7 @@ function courseScript() {
         else {
             weekday = dateStringCreator(processDate.getDay());
             month = monthStringCreator(processDate.getMonth());
-            output.innerHTML = 'Your final will be graded around:<strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + processDate.getDate() + ', ' + processDate.getFullYear() + '</strong>. You can check your status on the <a href="https://jatc669.wccnet.edu/login/index.php">Testing Website</a>.';
+            output.innerHTML = 'Your final will be graded around:<strong> ' + weekday + ',&nbsp;' + month + '&nbsp;' + processDate.getDate() + ', ' + processDate.getFullYear() + '</strong>. You can check your status on the <a href="https://jatc669.wccnet.edu/">Testing Website</a>.';
             document.getElementById('recTimeOutput').className = 'recTimeOutputShown fade';
             document.getElementById('submitButton').className = 'expand';
         }
