@@ -1,187 +1,86 @@
-<!doctype html>
-<html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Intake Logs</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <script src="js/vendor/modernizr.js"></script>
-    <script src="js/intake-logs.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"> 
+	<link rel="stylesheet" type="text/css" href="css/intake-logs.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
+</head>
+<body onload="setInitDates()">
+	<!-- INPUT -->
+	<div class="hide-for-print">
+		<label>Choose Course</label>
+		<select id="courseName" onchange="selectGrader()">
+			<option name="default" disabled selected>COURSE</option>
+			<option value="04" name="spf04">04</option>
+			<option value="07" name="spf07">07</option>
+			<option value="19" name="spf19">19</option>
+		</select>
+		<br>
 
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-  </head>
-  <body onload="load()">
-  
-    <header>
-      <div class="row">
-        <div class="small-12 medium-12 large-12 columns">
-          <span><a class="logo" href="index.html">JATC669@WCC&nbsp;</a></span>
-          <span><small><a href="tel:+18663418674">866-341-8674</a></small></span>
-        </div>
-      </div>
-    </header>
 
-    <main>
-      <form>
-        <div class="row">
-          <label for="backDate" class="medium-3 columns">Date
-            <input type="date" name="backDate" id="backDate">
-          </label>
-        </div>
-        <div class="row">
-          <label for="studentId" class="medium-4 columns">Student ID
-            <input type="text" name="studentId" value="@00">
-          </label>
-          <label for="lastName" class="medium-4 columns">Last Name
-            <input type="text" name="lastName" placeholder="L. Name">
-          </label>
-          <label for="firstName" class="medium-4 columns">First Name
-            <input type="text" name="firstName" placeholder="F. Name">
-          </label>
-          <label for="courseNumber" class="medium-4 columns">Course
-            <input type="text" name="courseNumber" placeholder="04">
-          </label>
-          <label for="lessons" class="medium-4 columns">Lessons/Final
-            <select name="courseNumber">
-              <option>Lessons</option>
-              <option>Final</option>
-            </select>
-          </label>
-          <label for="courseNumber" class="medium-4 columns">Lesson
-            <input type="text" name="courseNumber">
-          </label>
-        </div>
-      </form>
+		<label>Select Grader</label>
+		<select id="graderNameValue">
+			<option default disabled selected>SELECT GRADER</option>
+			<option id="grader1" value="Christy Lindemann">Christy Lindemann</option>
+			<option id="grader2" value="Mariano Sastre">Mariano Sastre</option>
+			<option id="grader3" value="Mike Quail">Mike Quail</option>
+			<option id="grader4" value="Mike King">Mike King</option>
+			<option id="grader5" value="Dena Blair">Dena Blair</option>
+		</select>
+		<br>
 
-      <div class="row">
-        <div class="medium-12 columns">
-            <button class="expand" type="button" onclick="populateTable()">SUBMIT</button>
-        </div>
-      </div>
+		<label>Choose Due</label>
+		<input id="dueDate" placeholder="Due Date">
+		<br>
+		<label>Week Ending</label>
+		<input id="weekEndingValue"></input>
+		<br>
+		<label>Student ID</label>
+		<input id="stuId" type="text" placeholder="@00">
+		<br>
+		<label>First Name</label>
+		<input id="fName" type="text" placeholder="First Name">
+		<br>
+		<label>Last Name</label>
+		<input id="lName" type="text" placeholder="Last Name">
+		<br>
+		
+		<label>Lessons</label>
+		<input type="text" id="lessons" placeholder="Lessons">
+		<br>
+		<label>&nbsp;</label>
+		<input type="submit" onclick="addEntry()" value="ADD TO LOG">
+		<br>
+		<br>
+	</div>
 
-      <div class="row">
-        <div class="small-12 columns">
-          <table width="100%">
-            <thead>
-              <tr>
-                <th>Date</th>
-                <th>Student ID</th>
-                <th>Last Name</th>
-                <th>First Name</th>
-                <th>Course</th>
-                <th>Lessons/Final</th>
-                <th>Lessons/Final</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Date</td>
-                <td>Date</td>
-                <td>Date</td>
-                <td>Date</td>
-                <td>Date</td>
-                <td>Date</td>
-                <td>Date</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      
-    </main>
+	<!-- GRADER INFO -->
+	<h2>JATC 669 Piece Work Rate Sheet<span id="weekEndingDate"></span><span id="graderName"></span></h2>
+	<table id="graderInfoTable" style="display: none;" width="100%">
+		<thead>
+			<tr>
+				<th>RECEIVED</th>
+				<th>DUE</th>
+				<th>COURSE</th>
+				<th>LESSONS</th>
+				<th>TOTAL PAID</th>
+			</tr>
+		</thead>
+		<tbody>
+			<td id="graderLessonsReceived"></td>
+			<td id="graderDueDate"></td>
+			<td id="graderCourseNumber"></td>
+			<td id="totalGraderLessons"></td>
+			<td id="totalGraderPay"></td>
+		</tbody>
+	</table>
+	<br>
 
-<!--
-    <main>
-      <div class="row">
-        <div class="small-12 columns">
-          <h2>Intake Logs</h2>
-        </div>
-        <div class="small-12 columns">
-          <table width="100%">
-            <thead>
+	<!-- INTAKE LOG -->
+	<table id="intakeLog" width="100%"><thead><tr><th class="hide-for-print">Date</th><th class="hidden">TimeStamp</th><th>Student ID</th><th>Last</th><th>First</th><th>Course</th><th>Submited</th><th>Total</th><th>Amount Due</th><th class="hide-for-print">Delete</th></tr></thead><tbody id="entryLog"></tbody></table>
 
-              <tr>
-                <td width="10%">Date</td>
-                <td width="13%">Student ID</td>
-                <td>Last Name</td>
-                <td>First name</td>
-                <td width="10%">Course</td>
-                <td width="10%">Lesson #s</td>
-                <td width="9%">Final</td>
-                <td width="9%">Total Submissions</td>
-                <td width="10%" colspan="2">Amount Due</td>
-              </tr>
+	<button class="hide-for-print" onclick="upload()">UPLOAD</button>
 
-              <tr class="new-intake">
-                <td>
-                  <input id="dateField" type="date">
-                </td>
-                <td>
-                  <div class="row collapse prefix-radius">
-                    <div class="small-4 columns">
-                      <span class="prefix">@00</span>
-                    </div>
-                    <div class="small-8 columns">
-                      <input id="studentId" type="text" autofocus = "autofocus">
-                    </div>  
-                  </div>
-                </td>
-                <td>
-                  <input id="lastName" type="text">
-                </td>
-                <td>
-                  <input id="firstName" type="text">
-                </td>
-                <td>
-                  <div class="row collapse prefix-radius">
-                    <div class="small-6 columns">
-                      <span class="prefix">SPF</span>
-                    </div>
-                    <div class="small-6 columns">
-                      <input id="course" type="text">
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <input id="lessons" type="text">
-                </td>
-                <td class="text-center">
-                  <input id="finalIndicator" type="text">
-                </td>
-                <td colspan="3">
-                  <button class="expand" onclick="addLog()">Add Log</button>
-                </td>
-              </tr>
-
-            </thead>
-            <tbody id="intakeLog">
-
-            </tbody>
-            <tfoot>
-              <tr>
-                <td colspan="6">&nbsp;</td>
-                <td>TOTALS</td>
-                <td id="individTotalSubs">Footer</td>
-                <td>Footer</td>
-              </tr>
-            </tfoot>
-          </table>
-
-        </div>
-      </div>
-    </main>
--->
-    <footer>
-    </footer>
-
-    <script type="text/javascript">intakeLogsInit()</script> 
-    <script type="text/javascript" src="js/js.js"></script>
-    <script type="text/javascript">init()</script> 
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
-  </body>
+	<script src="js/intake-logs.js"></script>
+</body>
 </html>
-

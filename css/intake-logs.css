@@ -1,0 +1,104 @@
+body
+{
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+button
+{
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+input
+{
+	font-family: 'Roboto Condensed', sans-serif;
+	margin-bottom: .25em;
+	font-size: 1em;
+}
+
+select
+{
+	font-family: 'Roboto Condensed', sans-serif;
+	width: 167px;
+	margin-bottom: .25em;
+	font-size: 1em;
+}
+
+table>*
+{
+	padding: 0;
+	margin: 0;
+	line-height: 1;
+	
+}
+
+table {
+	border: 2px solid #333;
+	border-collapse: collapse;
+	border-spacing: .3em .5em;
+}
+
+th
+{
+	background-color: #333;
+	color: #fff;
+	text-align: left;
+	padding: .3em .5em .2em .5em;
+}
+
+td
+{
+	border: 1px solid #333;
+	padding: .3em .5em .2em .5em;
+}
+
+.hidden
+{
+	display: none;
+}
+
+label
+{
+	display:inline-block;
+	width: 7em;
+	text-align: right;
+}
+
+#graderInfoTable
+{
+	font-size: 1.5em;
+}
+
+#graderInfoTable th, #graderInfoTable td 
+{
+	text-align: center;
+}
+
+h2 span
+{
+	font-size: .65em;
+	float: right;
+	line-height: 2em;
+}
+
+@media print {
+
+	tbody
+	{
+		border: 1px solid #333;
+	}
+	th
+	{
+		background-color: #ccc;
+		color: #fff;
+		text-align: left;
+		padding: .3em .5em .2em .5em
+	}
+
+
+	.hide-for-print
+	{
+		display: none;
+	}
+
+}
+
