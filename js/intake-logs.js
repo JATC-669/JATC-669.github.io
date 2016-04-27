@@ -183,7 +183,8 @@ function run(entId, stuId, fName, lName, courseName, lessons) {
 	cell5.innerHTML = entry.first;
 	cell6.innerHTML = entry.course;
 	cell7.innerHTML = splitLessons(entry.lesson);
-	cell7.style.textAlign = 'center';
+	// WORKED cell7.style.textAlign = 'center';
+	cell7.style = 'text-align: center; white-space: nowrap';
 	cell8.innerHTML = totalLessons(entry.lesson);
 	cell8.style.textAlign = 'center';
 	cell9.innerHTML = '$' + (totalLessons(entry.lesson) * 3.50).toFixed(2);
