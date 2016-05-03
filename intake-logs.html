@@ -4,22 +4,28 @@
 	<meta charset="UTF-8"> 
 	<link rel="stylesheet" type="text/css" href="css/intake-logs.css">
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
 </head>
-<body onload="setInitDates()">
+<body onload="setInitBackDate()">
 	<!-- INPUT -->
 	<div class="hide-for-print">
+
+		<label>Back Date</label>
+		<input id="backDateInput" placeholder="Back Date" onchange="setDueDate()">
+		<br>
+		<label>Due Due</label>
+		<input id="dueDateInput" placeholder="Due Date">
+		<br>
 		<label>Choose Course</label>
-		<select id="courseName" onchange="selectGrader()">
+		<select id="courseNameInput" onchange="selectGrader()">
 			<option name="default" disabled selected>COURSE</option>
 			<option value="04" name="spf04">04</option>
 			<option value="07" name="spf07">07</option>
 			<option value="19" name="spf19">19</option>
 		</select>
 		<br>
-
-
 		<label>Select Grader</label>
-		<select id="graderNameValue">
+		<select id="graderNameInput">
 			<option default disabled selected>SELECT GRADER</option>
 			<option id="grader1" value="Christy Lindemann">Cristy Lindemann</option>
 			<option id="grader2" value="Mariano Sastre">Mariano Sastre</option>
@@ -29,24 +35,22 @@
 		</select>
 		<br>
 
-		<label>Choose Due</label>
-		<input id="dueDate" placeholder="Due Date">
-		<br>
+		
 		<label>Week Ending</label>
-		<input id="weekEndingValue"></input>
+		<input id="weekEndingInput"></input>
 		<br>
 		<label>Student ID</label>
-		<input id="stuId" type="text" placeholder="@00">
+		<input id="stuIdInput" type="text" placeholder="@00" >
 		<br>
 		<label>First Name</label>
-		<input id="fName" type="text" placeholder="First Name">
+		<input id="fNameInput" type="text" placeholder="First Name">
 		<br>
 		<label>Last Name</label>
-		<input id="lName" type="text" placeholder="Last Name">
+		<input id="lNameInput" type="text" placeholder="Last Name">
 		<br>
 		
 		<label>Lessons</label>
-		<input type="text" id="lessons" placeholder="Lessons">
+		<input type="text" id="lessonsInput" placeholder="Lessons">
 		<br>
 		<label>&nbsp;</label>
 		<input type="submit" onclick="addEntry()" value="ADD TO LOG">
@@ -55,8 +59,8 @@
 	</div>
 
 	<!-- GRADER INFO -->
-	<h2>JATC 669 Piece Work Rate Sheet<span id="weekEndingDate"></span><span id="graderName"></span></h2>
-	<table id="graderInfoTable" style="display: none;" width="100%">
+	<h2>JATC 669 Piece Work Rate Sheet<span id="weekEndingHeaderOutput"></span><span id="graderNameHeaderOutput"></span></h2>
+	<table id="graderInfoTable" style="display: block;" width="100%">
 		<thead>
 			<tr>
 				<th>RECEIVED</th>
@@ -67,20 +71,22 @@
 			</tr>
 		</thead>
 		<tbody>
-			<td id="graderLessonsReceived"></td>
-			<td id="graderDueDate"></td>
-			<td id="graderCourseNumber"></td>
-			<td id="totalGraderLessons"></td>
-			<td id="totalGraderPay"></td>
+			<tr>
+			<td id="graderBackDateOutput"></td>
+			<td id="graderDueDateOutput"></td>
+			<td id="graderCourseNumberOutput"></td>
+			<td id="graderTotalLessonsOutput"></td>
+			<td id="graderTotalPayOutput"></td>
+		</tr>
 		</tbody>
 	</table>
 	<br>
 
 	<!-- INTAKE LOG -->
-	<table id="intakeLog" width="100%"><thead><tr><th class="hide-for-print">Date</th><th class="hidden">TimeStamp</th><th>Student ID</th><th>Last</th><th>First</th><th>Course</th><th>Submitted</th><th>Total</th><th>Amount Due</th><th class="hide-for-print">Delete</th></tr></thead><tbody id="entryLog"></tbody></table>
+	<table id="intakeLog" width="100%"><thead><tr><th class="hide-for-print hidden">Timestamp</th><th class="hide-for-print">Back Date</th><th>Student ID</th><th>Last</th><th>First</th><th>Course</th><th>Submitted</th><th>Total</th><th class="hide-for-print">Grader</th><th>Amount Due</th><th class="hide-for-print">Delete</th></tr></thead><tbody id="entryLog"></tbody></table>
 
 	<button class="hide-for-print" onclick="upload()">UPLOAD</button>
-
+	<button onclick="download()">Save</button>
 	<script src="js/intake-logs.js"></script>
 </body>
 </html>
