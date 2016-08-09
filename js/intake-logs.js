@@ -292,32 +292,32 @@ function upload() {
 
 	var submissions = '"submissions":[' + jsonOutput.submissions + ']';
 	
-	m1 = graderInfoTable.rows[0].cells[0].innerHTML;
-	n1 = graderInfoTable.rows[0].cells[1].innerHTML;
-	o1 = graderInfoTable.rows[0].cells[2].innerHTML;
-	p1 = graderInfoTable.rows[0].cells[3].innerHTML;
-	q1 = graderInfoTable.rows[0].cells[4].innerHTML;
-	r1 = 'GRADER';
-	s1 = 'WEEK ENDING';
+	var m1 = graderInfoTable.rows[0].cells[0].innerHTML;
+	var n1 = graderInfoTable.rows[0].cells[1].innerHTML;
+	var o1 = graderInfoTable.rows[0].cells[2].innerHTML;
+	var p1 = graderInfoTable.rows[0].cells[3].innerHTML;
+	var q1 = graderInfoTable.rows[0].cells[4].innerHTML;
+	var r1 = 'GRADER';
+	var s1 = 'WEEK ENDING';
 
-	m2 = graderInfoTable.rows[1].cells[0].innerHTML;
-	n2 = graderInfoTable.rows[1].cells[1].innerHTML;
-	o2 = graderInfoTable.rows[1].cells[2].innerHTML;
-	p2 = graderInfoTable.rows[1].cells[3].innerHTML;
-	q2 = graderInfoTable.rows[1].cells[4].innerHTML;
-	r2 = graderNameInput.value;
-	s2 = weekEndingInput.value;
+	var m2 = graderInfoTable.rows[1].cells[0].innerHTML;
+	var n2 = graderInfoTable.rows[1].cells[1].innerHTML;
+	var o2 = graderInfoTable.rows[1].cells[2].innerHTML;
+	var p2 = graderInfoTable.rows[1].cells[3].innerHTML;
+	var q2 = graderInfoTable.rows[1].cells[4].innerHTML;
+	var r2 = graderNameInput.value;
+	var s2 = weekEndingInput.value;
 
 
 
-	start = '"intakeLogData":[{"';
-	split = '":"';
-	comma = '","';
-	end   = '"}]'
+	var start = '"intakeLogData":[{"';
+	var split = '":"';
+	var comma = '","';
+	var end   = '"}]';
 
 	var intakeLogData = start + m1 + split + m2 + comma + n1 + split + n2 + comma + o1 + split + o2 + comma + p1 + split + p2 + comma + q1 + split + q2 + comma + r1 + split + r2 + comma + s1 + split + s2 + end;
 
-	alert('{' + intakeLogData + ',' + submissions + '}')
+	alert('{' + intakeLogData + ',' + submissions + '}');
 }
 
 

@@ -10683,3 +10683,8 @@ table, thead, tfoot {
   margin-bottom: 1em;
   color: white;
 }
+
+/* line 359, ../scss/_style.scss */
+.dogs {
+  color: red;
+}
