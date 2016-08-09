@@ -5,9 +5,14 @@ header
 
 	span
 	{
-		color: #fff;
+		color: $white;
 		font-weight: bold;
 		font-size: 1.5em;
+
+		a
+		{
+			color: $white - 40;
+		}
 	}
 
 	.logo
@@ -53,26 +58,55 @@ label
 button
 {
 	font-family: $main-font;
-	border: 6px solid $main-color - 20;
+	border: 6px solid $main-color - 40;
+	background-color: $darkest;
+	transition: border 0.25s ease;
+}
+
+.first-column button
+{
+	font-family: $main-font;
+	border: 6px solid #C96200 - 20;
 	background-color: $darkest;
 }
 
-button:hover
+.first-column button:hover
 {
-	border: 6px solid $main-color - 40;
+	border: 6px solid #C96200 - 40;
+	transition: border 0.25s ease;
 }
+
+.second-column button
+{
+	font-family: $main-font;
+	border: 6px solid #C91300 - 20;
+	background-color: $darkest;
+}
+
+.second-column button:hover
+{
+	border: 6px solid #C91300 - 40;
+	transition: border 0.25s ease;
+}
+
+.third-column a
+{
+	color: $white;
+}
+
 
 .tabs dd
 {
 	width: 33.3333%;
 	font-family: $main-font;
 
+
 }
 
 .tabs dd > a
 {
 	padding: 10px;
-	border: 6px solid $main-color - 20;
+	
 	transition: background-color 0.5s ease;
 	background-color: $darkest;
 	color: $white;
@@ -83,12 +117,12 @@ button:hover
 .tabs dd > a:hover
 {
 	transition: background-color 0.5s ease;
-	background-color: $main-color;
+	background-color: #A70052 - 30;
 }
 
 .tabs dd.active a, .tabs .tab-title.active a
 {
-	background-color: $dark + $main-color - 40;
+	background-color: #A70052 - 40;
 	color: $white;
 }
 
@@ -96,6 +130,27 @@ button:hover
 {
 	list-style-type: none;
 	margin-left: 0;
+}
+
+.first-column button
+{
+	border: 6px solid #C96200;
+}
+
+.second-column button
+{
+	border: 6px solid #C91300;
+}
+
+.third-column .tabs dd:nth-child(odd)
+{
+	border: 6px solid #A70052;
+}
+
+.third-column .tabs dd:nth-child(even)
+{
+	border-top: 6px solid #A70052;
+	border-bottom: 6px solid #A70052;
 }
 
 
@@ -355,7 +410,3 @@ table, thead, tfoot
 	}
 }
 
-.dogs
-{
-	color: red;
-}
